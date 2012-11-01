@@ -1,0 +1,73 @@
+<div id="options_index" class="pages">
+	<fieldset><legend>Backup DB</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'backup-db-list'), 'default', true);
+			?>" title="Backup de la base de datos">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>database_save.png" />
+		
+		Copias de la base de datos</a></p>
+	</fieldset>
+	<fieldset><legend>Informes</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'report-edit'), 'default', true);
+			?>" title="Informes">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>report_edit.png" />
+		
+		Editar configuración para los Informes</a></p>
+
+	</fieldset>
+	<fieldset><legend>Usuarios</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'cuadrante-load'), 'default', true);
+			?>" title="Cargar Cuadrante en Excel">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>page_excel.png" />
+		
+		Cargar Cuadrante en Excel</a></p>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'users'), 'default', true);
+			?>" title="Usuarios">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>group.png" />
+		
+		Editar configuración para los Usuarios</a></p>
+
+	</fieldset>
+	<fieldset><legend>Materiales</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'estado-material'), 'default', true);
+			?>" title="Editar Estados de los Materiales">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>pill.png" />
+		
+		Editar Estados de los Materiales</a></p>
+	</fieldset>
+	<fieldset><legend>Veh&iacute;culos</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'vehiculo', 
+										'action' => 'index'), 'default', true);
+			?>" title="Listado Vehiculos">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>car.png" />
+		
+		Listado Veh&iacute;culos</a></p>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'vehiculo-tipos-disponibilidad'), 'default', true);
+			?>" title="Tipos de Disponibilidad">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>car.png" />
+		
+		Tipos de Disponibilidad</a></p>
+	</fieldset>	
+	<fieldset><legend>Otros</legend>
+		<p><a href="
+			<?php echo $this->url(array('controller' => 'options', 
+										'action' => 'otros'), 'default', true);
+			?>" title="Otros">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>cog_edit.png" />
+		
+		Otros</a></p>
+
+	</fieldset>
+</div>

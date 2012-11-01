@@ -1,0 +1,152 @@
+@CHARSET "ISO-8859-1";
+
+/* Zend Form Styling */
+
+dl.zend_form dt, dl.zend_form dd { min-height: 20px; }
+dl.zend_form dt {
+	float: left;
+	clear: left;
+	text-align: right;
+}
+dl.zend_form dt label.required { font-weight: 600; }
+dt label.required:before {
+    content: "* ";
+    color: #ff0000;
+}
+dt label:after{
+	content: ":";	
+}
+dl.zend_form dd {
+	float: left;
+	clear: right;
+	padding-left: 5px;
+}
+
+dl.zend_form dd ul.errors {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+dl.zend_form dd ul.errors li {
+	float: left;
+	margin: 0 0.15em 0.20em;
+	font-size: 12px;
+	color: #ff0000;
+	clear: both;
+}
+
+dl.zend_form dd button{
+	margin-left: 5em;
+}
+
+dl.zend_form dd p{
+	font-size: 1em;
+	font-style:italic;
+	
+}
+dl.zend_form dd p{
+	clear: both;	
+}
+/*DL, DT, DD TAGS LIST DATA*/
+dl.zend_form {
+	/*margin-bottom:50px;*/
+}
+
+dl.zend_form dt {
+	float:left; 
+	/*font-weight:bold;*/ 
+	margin-right:10px; 
+	padding:5px;  
+	width:150px; 
+}
+
+dl.zend_form fieldset{
+	border: 1px solid #808080;
+	margin: 1em 5em 1em 5em;
+	padding: 1em 2em 1em 1em;
+	-moz-border-radius: 0.5em;
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+
+dl.zend_form fieldset legend{
+	margin-left: 0.6em;
+	font-weight: bold;
+	padding: 0 0.3em 0 0.2em;
+}
+
+dl.zend_form #eliminar-element{
+	float: right;
+}
+
+dl.zend_form #fieldset-label, dl.zend_form #fieldset1-label, dl.zend_form #fieldset2-label, dl.zend_form #fieldset3-label,
+dl.zend_form #eliminar-label
+{
+	width: 0px;
+	visibility: hidden;
+}
+
+dl.zend_form dd fieldset dl dd button
+{
+    margin-left: 2em;
+}
+
+dl.zend_form dd fieldset dl div
+{
+    width: 25%;
+    display: inline-block;
+    float: left;
+    vertical-align: top;	
+}
+dl.zend_form dd fieldset dl div.buttons
+{
+    /*margin-left: 5em;*/	
+}
+dl.zend_form dd fieldset dl div dd
+{
+	clear: left;
+}
+
+dl.zend_form dd fieldset dl div.home
+{
+    clear: left;
+    overflow: auto;
+    min-width: 35%;
+}
+
+dl.zend_form dd[id^="fieldset"]
+{
+    width: 85%;	
+}
+
+dl.zend_form #grid_table-label{
+	width: 0px;
+}
+dl.zend_form #grid_table-element{
+	width: 90%;
+}
+
+dl.zend_form dd#grid_vehiculo_1-element,dl.zend_form dd#grid_vehiculo_2-element,dl.zend_form dd#grid_vehiculo_3-element,
+	dl.zend_form dd#grid_vehiculo_4-element,dl.zend_form dd#grid_vehiculo_5-element,dl.zend_form dd#grid_vehiculo_6-element,
+	dl.zend_form dd#grid_vehiculo_7-element,dl.zend_form dd#grid_vehiculo_8-element,dl.zend_form dd#grid_vehiculo_9-element,
+	dl.zend_form dd#grid_vehiculo_10-element,dl.zend_form dd#grid_vehiculo_11-element,dl.zend_form dd#grid_vehiculo_12-element,
+	dl.zend_form dd#grid_vehiculo_13-element,dl.zend_form dd#grid_vehiculo_14-element,dl.zend_form dd#grid_vehiculo_15-element{
+	clear: both;
+	width: 100%;
+}
+
+dl.zend_form select[multiple="multiple"]
+{
+    min-height: 100px;
+}
+
+dl.zend_form textarea
+{
+    height: 10em;
+}
+
+dl.zend_form input[type="text"]{
+    width: 200px;
+}

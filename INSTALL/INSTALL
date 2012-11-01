@@ -1,0 +1,84 @@
+Kraken, es una aplicación para la gestión de una armeria. Está diseñado especificamente para la armería del GRS-8 de la Guardia Civil.
+
+Esta aplicación usa PHP 5.3, Mysql y servidor Apache y Zend Framework 1.11
+
+=====================================================
+PASOS PARA LA INSTALACIÓN
+=====================================================
+
+1º - Crear una base de datos MYSQL llamada kraken, e importar el fichero kraken.sql.
+2º - Copiar el directorio kraken, en el servidor, habitualmente /htdocs o /www.
+4º - Cambiar los permisos de diferentes subdirectorios del kraken a 777 o por lo menos que se pueda escribir en ellos por la aplación web:
+
+	/kraken/private/
+	/kraken/private/cuadrante/
+
+	/kraken/tmp/
+
+	/kraken/public/download/backup/
+	/kraken/public/download/recuento/
+	/kraken/public/download/usuario/
+
+	/kraken/public/images/categorias/
+	/kraken/public/images/materiales/
+	/kraken/public/images/usuarios/vehiculos/
+
+	/kraken/public/media/temp/
+	/kraken/public/media/temp/Barcelos/
+
+3º - Abrir el fichero /kraken/application/configs/application.ini y modificar las siguientes lineas:
+
+	resources.db.params.username = "root"
+	resources.db.params.password = "password"
+
+ 	Poner el nombre de usuario y contraseña para el acceso a la base de datos kraken.
+
+
+	Mirar también:
+
+	resources.layout.imagesPath = "/opt/lampp/htdocs/kraken/public/images/"
+	resources.layout.imagesExportTo = "/opt/lampp/htdocs/kraken/public/images/export/"
+	resources.layout.js = '/opt/lampp/htdocs/kraken/public/js/'
+	resources.layout.download.recuento = "/opt/lampp/htdocs/kraken/public/download/recuento/"
+	resources.layout.download.backup = "/opt/lampp/htdocs/kraken/public/download/backup/"
+	resources.layout.download.usuario = "/opt/lampp/htdocs/kraken/public/download/usuario/"
+	resources.layout.private.dir = "/opt/lampp/htdocs/kraken/private/"
+	resources.layout.private.cuadrante = "/opt/lampp/htdocs/kraken/private/cuadrante/"
+
+	Cambiando las rutas a donde se encruentan los directorios.
+
+4º - Crear un virtual host en el servidor Apache. para ello vamos a editar el fichero httpd-vhost.conf del servidor y añadiremos:
+
+<VirtualHost *:80>
+    ServerName kraken.localhost
+    DocumentRoot /opt/lampp/htdocs/kraken/public
+ 
+    SetEnv APPLICATION_ENV "development"
+ 
+    <Directory /opt/lampp/htdocs/kraken/public>
+        DirectoryIndex index.php
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+cambiando el Servername, DocumentRoot y Directory y por supuesto el SetEnv a "production" si no queremos que salgan warnings en la aplicación.
+
+5º - Modificar el fichero hosts del sistema:
+	Si es Windows sería: C:\WINDOWS\system32\drivers\etc\hosts
+	En linux habitualmente en /etc/hosts
+
+	y añadir la linea: 
+		127.0.0.1 kraken.localhost
+
+6º - Reiniciar el servidor Apache.
+
+7º - Ingresar en la dirección: 
+	http://kraken.localhost
+
+	Introducir como datos de acceso:
+
+		TIP: A11111A
+		Contraseña: kraken
+

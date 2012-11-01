@@ -1,0 +1,474 @@
+html,body {
+	font-size: 100%;
+	font-family: Verdana,Helvetica,Arial;
+	font-size: 10px;
+	background-color: #f0fff8;
+	color: #000;
+}
+
+h1 a,
+h1 a:visited{
+	color:  #fff;	
+}
+
+h2{
+	font-size: 1.8em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+h3{
+	font-size: 1.5em;
+	margin: 0.5em 0em 0em 1em;	
+}
+h4{
+	font-size: 1.3em;	
+}
+p{
+	font-size: 1.3em;
+	margin: 1em;
+}
+
+
+/* Header 
+-----------------------------------------------------------------------------*/ 
+#hd{
+	background-color: #397662;
+	/*background-color: #4E8D7A;*/
+}
+	#hd .cabecera{
+		height: 60px;
+		background:url(../images/logo.png) no-repeat 0 1px; 
+		color: #fff;
+		font-size: 2em;
+		font-weight: bold;
+		text-align: center;
+	}
+		#hd .cabecera h1{
+			padding-top: 0.8em;
+			margin-left: 10em;
+		}
+		
+		#hd .cabecera div.logo_ars{
+			float: right;
+			background: url(../images/logo_ars2.png) no-repeat;
+			width: 67px;
+			height: 59px;
+		}
+		
+		#hd .cabecera div.buttons{
+			float: right;
+			width: 200px;
+			height: 18px;
+			margin: 0.2em;
+		}
+			#hd .cabecera div.buttons input{
+				font-size: 10px;
+				float: right;
+				font-weight: normal;
+			}
+			
+			#hd .cabecera div.buttons ul{
+				float: right;
+				clear: both;
+			}
+				#hd .cabecera div.buttons ul li{
+					display: inline;
+					width: 15px;
+					 
+				}
+				
+					#hd .cabecera div.buttons ul li span{
+						display: none;
+					}
+	
+	#hd ul.menu{margin:0 auto; padding:0; height:30px; width:100%; display:block; background:url('../images/topMenuImages.png') repeat-x;}
+	#hd ul.menu li{padding:0; margin:0; list-style:none; display:inline;}
+	#hd ul.menu li a{float:left; padding-left:15px; display:block; color:rgb(240,255,248); text-decoration:none; font:1.2em Verdana, Arial, Helvetica, sans-serif; cursor:pointer; background:url('../images/topMenuImages.png') 0px -30px no-repeat;}
+	#hd ul.menu li a span{line-height:30px; float:left; display:block; padding-right:15px; background:url('../images/topMenuImages.png') 100% -30px no-repeat;}
+	#hd ul.menu li a:hover{background-position:0px -60px; color:rgb(240,255,248);}
+	#hd ul.menu li a:hover span{background-position:100% -60px;}
+	#hd ul.menu li a.active, .menu li a.active:hover{line-height:30px; font:1.2em Verdana, Arial, Helvetica, sans-serif; background:url('../images/topMenuImages.png') 0px -90px no-repeat; color:rgb(240,255,248);}
+	#hd ul.menu li a.active span, .menu li a.active:hover span{background:url('../images/topMenuImages.png') 100% -90px no-repeat;}
+	#hd ul.menu li a span{font-weight: bold;}
+	
+	
+	
+/* Body 
+-----------------------------------------------------------------------------*/ 
+
+
+#bd #breadcrumbs{
+	background-color: #b0c4a8;
+	margin-top: 0.1em;
+	padding: 0.8em 2em 0.8em 2em;
+	font-weight: bold;
+	-moz-border-radius: 0 0 0.5em 0.5em;
+}
+	#bd #breadcrumbs a{
+		color: inherit;
+		font-weight: normal;
+	}
+	
+	#bd #yui-main{
+		margin-top: 1em;
+	
+	}
+
+
+/* Botones
+-----------------------------------------------------------------------------*/ 
+a.button{
+	background:url(../images/button.gif);
+	display:block;
+	color:#555555;
+	font-weight:bold;
+	height:30px;
+	line-height:29px;
+	margin:14px;
+	text-decoration:none;
+	width:191px;
+	border: 0;
+}
+a:hover.button{
+	color:#0066CC;
+}
+
+a.button span.addUser{
+	background:url(../images/icons/user_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addSalida{
+	background:url(../images/icons/date_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addGasto{
+	background:url(../images/icons/coins_delete.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addNovedad{
+	background:url(../images/icons/bell_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addRecuento{
+	background:url(../images/icons/calculator_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addCategorie{
+	background:url(../images/icons/folder_add.png) no-repeat 10px 6px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addBackupDb{
+	background:url(../images/icons/database_add.png) no-repeat 10px 6px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addVerbal{
+	background:url(../images/icons/comment_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addSA9{
+	background:url(../images/icons/page_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addVehiculo{
+	background:url(../images/icons/car_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addEncuadramiento{
+	background:url(../images/icons/page_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.autoEncuadramiento{
+	background:url(../images/icons/font_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.add{
+	background:url(../images/icons/add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+div.group_actions{
+	background: #fff2ca;
+	display: block;
+	padding: 0.3em;
+	margin-bottom: 1em;
+	border: 1px solid black;
+	width: 8em;
+	-moz-border-radius: 0.5em;
+	text-align: right;
+	float: right;
+}
+
+/* Alert Messages
+-----------------------------------------------------------------------------*/ 
+#messages p{
+	text-align: left;
+	padding: 5px 20px 5px 45px;
+	font-size: 1.2em;
+	margin: 0;
+}
+#messages p.error {
+	background: #fff6bf url(/images/layout/icons/exclamation.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #ffd324;
+	border-bottom: 1px solid #ffd324;
+}
+#messages p.info {
+	background: #BDE5F8 url(/images/layout/icons/information.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #00529B;
+	border-bottom: 1px solid #00529B;
+	color: #00529B;	
+}
+#messages p.success {
+	background: #DFF2BF url(/images/layout/icons/success.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #4F8A10;
+	border-bottom: 1px solid #4F8A10;
+	color: #406F0D;
+}
+#messages p.warning {
+	background: #FEEFB3 url(/images/layout/icons/warning.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #9F6000;
+	border-bottom: 1px solid #9F6000;
+	color: #9F6000;	
+		
+}
+
+
+/* Anadir cantidad de material seleccionado
+-----------------------------------------------------------------------------*/ 
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+
+.window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:50px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+
+#dialog_add_qty .d-header {
+  width:375px; 
+  height:40px;
+  color:#ffffff;
+}
+
+/* ========================================= clearfix == */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-block;
+}
+.clearfix {
+	display:block;
+}
+* html .clearfix {
+	height:1px;
+}
+
+/*** Algunas clases utiles: ***/
+.clear {
+        clear: both;
+}
+.float-left {
+        float: left;
+}
+.float-right {
+        float: right;
+}
+.helvetica {
+        font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+.text-align-right{
+	text-align: right;
+}
+.text-align-left{
+	text-align: left;
+}
+
+
+
+h4.estado, h4.vehiculo{
+	margin: 0.5em 0 0.5em 0;
+	border: 1px solid;
+	border-left: none;
+	border-right: none;
+	background-color: #ffd600;
+}
+
+h4.vehiculo{
+	font-weight: bold;
+}
+
+
+#cuadrante_leyenda{
+	width: 100%;
+}
+	#cuadrante_leyenda td{
+		text-align: center;
+		height: 20px;
+		width: 30px;
+		vertical-align: top;
+	}
+	
+#ajax_loading-element, ajax_loading-label{
+	display: none;
+}
+
+ul#links-modules{
+
+}
+	ul#links-modules li{
+		
+	}
+	ul#links-modules li a{
+		font-size: 1.5em;
+		display:block;
+		font-weight:bold;
+		color:#555555;
+		text-decoration:none;
+		border: 0;		
+		
+		line-height:60px;
+		margin:5px;	
+		width:380px;	
+	}
+	ul#links-modules li a:hover{
+		color:#0066CC;
+	}	
+		ul#links-modules li a span{
+			background:url(../images/icons/lictores.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		
+		ul#links-modules li a span.users{
+			background:url(../images/icons/mod_users.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		ul#links-modules li a span.automovilismo{
+			background:url(../images/icons/mod_automovilismo.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		ul#links-modules li a span.transmisiones{
+			background:url(../images/icons/mod_transmisiones.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		ul#links-modules li a span.armamento{
+			background:url(../images/icons/mod_armamento.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		ul#links-modules li a span.instruccion{
+			background:url(../images/icons/mod_instruccion.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+		ul#links-modules li a span.servicios{
+			background:url(../images/icons/mod_servicios.png) no-repeat 10px 8px;
+			text-indent:55px;
+			display:block;
+		}	
+
+
+fieldset#leyenda{
+	float: left;
+	clear: both;
+	text-align: left;
+	border: 1px solid #808080;
+	margin: 1em 0 1em 5em;
+	padding: 1em 2em 1em 1em;
+	-moz-border-radius: 0.5em;	
+}
+	fieldset#leyenda legend{
+		margin-left: 0.6em;
+		font-weight: bold;
+		padding: 0 0.3em 0 0.2em;
+	}
+	fieldset#leyenda dt {
+		float: left;
+		clear: left;
+		text-align: right;
+		font-weight:bold;
+		width:50px;  	
+	}
+	fieldset#leyenda dd {
+		float: left;
+		clear: right;
+		padding-left: 5px;
+	}	
+	
+
+
+/* Img Caption styles */
+
+.imgcaption{
+	text-align:center;
+	vertical-align: bottom;
+}
+
+.imgcaption a{
+	text-decoration: none;
+}
+
+.imgcaption .images {
+    text-align: center;
+}
+
+.eccaption p {
+    font-size: small;
+    margin: 0;
+    padding: 8px;
+}
+
+.imgcaption img {
+    border: 10px solid #444444;
+    padding: 5px;
+    background-color: #FFFFCC;
+}

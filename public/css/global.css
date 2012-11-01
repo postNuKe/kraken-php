@@ -1,0 +1,213 @@
+/* Import other stylesheets 
+-----------------------------------------------------------------------------*/ 
+@import url("/css/grid.css");
+
+html,body {
+	font-size: 100%;
+	margin: 0;
+	font-family: Verdana, sans-serif;
+	width: 920px;
+	margin: 0 auto;
+	font-size: 10px;
+	
+}
+
+/* ============================== BOTONES =========================================== */
+
+a.button{
+	background:url(/images/layout/button.gif);
+	display:block;
+	color:#555555;
+	font-weight:bold;
+	height:30px;
+	line-height:29px;
+	margin:14px;
+	text-decoration:none;
+	width:191px;
+	border: 0;
+}
+a:hover.button{
+	color:#0066CC;
+}
+
+a.button span.addUser{
+	background:url(/images/layout/icons/user_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addSalida{
+	background:url(/images/layout/icons/date_add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+a.button span.addCategorie{
+	background:url(/images/layout/icons/folder.png) no-repeat 10px 6px;
+	text-indent:30px;
+	display:block;
+}
+
+
+a.button span.add{
+	background:url(/images/layout/icons/add.png) no-repeat 10px 8px;
+	text-indent:30px;
+	display:block;
+}
+
+
+/* ============================== OTRAS =========================================== */
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+
+.window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:50px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+
+#dialog_add_qty .d-header {
+  width:375px; 
+  height:40px;
+  color:#ffffff;
+}
+
+/* ========================================= clearfix == */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-block;
+}
+.clearfix {
+	display:block;
+}
+* html .clearfix {
+	height:1px;
+}
+
+/*** Algunas clases útiles: ***/
+        .clear {
+                clear: both;
+        }
+        .float-left {
+                float: left;
+        }
+        .float-right {
+                float: right;
+        }
+        .helvetica {
+                font-family: Arial, Helvetica, Geneva, sans-serif;
+        }
+
+/* ============================== MATERIALES =========================================== */        
+        
+#header-material{
+	display: block;
+	width: 50%;
+}        
+
+	TABLE#materiales{}
+	TABLE#materiales TD.nombre{
+		font-weight: bold;
+	}
+
+#categorias td.nombre{
+	background:url(/images/layout/icons/folder.png) no-repeat 5px center;
+	padding:0 20px 0 25px;
+	white-space:nowrap;
+}
+
+/* ============================== USUARIOS =========================================== */
+
+/* ============ VIEW ================ */
+
+#usuario_view #info{
+	padding: 0 2em;
+}
+
+	#usuario_view #info img{
+		margin: 0 0 10px 10px;
+		border: 1px solid #666;
+		padding: 2px;
+	}
+	#usuario_view #info ul{
+		list-style-type: none;
+		font-size: 1.5em;
+		padding: 2em 1em 2em 1em;
+	}
+	#usuario_view #info ul li span{
+		text-decoration: underline;
+		font-size: 0.8em;
+	}
+
+/* ============ EDIT ================ */
+
+
+/* ============================== LAYOUT =========================================== */
+
+#header{
+	background-color: #EEEEEE;
+}
+	#header #header-logo {
+		float: left;
+		width: 100%;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	
+	
+	#header #header-navigation{
+		float: right;
+	}
+
+/* ============================== ALERT MESSAGES =========================================== */
+#messages p{
+	text-align: left;
+	padding: 5px 20px 5px 45px;
+}
+#messages p.error {
+	background: #fff6bf url(/images/layout/icons/exclamation.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #ffd324;
+	border-bottom: 1px solid #ffd324;
+}
+#messages p.info {
+	background: #BDE5F8 url(/images/layout/icons/information.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #00529B;
+	border-bottom: 1px solid #00529B;
+	color: #00529B;	
+}
+#messages p.success {
+	background: #DFF2BF url(/images/layout/icons/success.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #4F8A10;
+	border-bottom: 1px solid #4F8A10;
+	color: #406F0D;
+}
+#messages p.warning {
+	background: #FEEFB3 url(/images/layout/icons/warning.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #9F6000;
+	border-bottom: 1px solid #9F6000;
+	color: #9F6000;	
+		
+}

@@ -1,0 +1,10 @@
+<h2>¿Seguro que quiere eliminar este Usuario?</h2>
+<p><?php echo $this->user->fullname_dni;?></p>
+<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'delete', 'id' => $this->user->idUsuario, 'confirm' => true));?>">
+	<img src="<?php echo $this->configLayout['iconsWWW'];?>delete.png"alt="Eliminar" />
+</a>
+<p>Este paso eliminar&aacute; el usuario. Si realmente este usuario se va del grupo y se quiere hacer entrega y 
+devoluci&oacute;n de material, haga click en el siguiente enlace 
+<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'usuario-inactivo', 'id' => $this->user->idUsuario));?>">
+	<img src="<?php echo $this->configLayout['iconsWWW'];?>user_go.png"alt="Pasar el Usuario a Inactivo en el Grupo" />
+</a>.</p>

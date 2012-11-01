@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+    <stylesheets>
+    	<stylesheet>reset-fonts-grids.css</stylesheet>
+    	<stylesheet>global.css</stylesheet> 
+    	<stylesheet>pages.css</stylesheet>   	
+        <stylesheet>form.css</stylesheet>
+        <stylesheet>grid.css</stylesheet>
+    </stylesheets>
+</skin>

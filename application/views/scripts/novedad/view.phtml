@@ -1,0 +1,29 @@
+<div id="novedad_view">
+	<div class="group_actions">
+		<a href="
+			<?php echo $this->url(array('controller' => 'export', 
+										'action' => 'novedad', 
+										'id' => $this->novedad->novedad_id), 'default', true);
+			?>" title="Exportar en PDF">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+		</a>
+	</div>
+	<div id="info" class="clear">
+		<dl>			
+			<dt>Nº Registro:</dt>
+			<dd><?php echo $this->novedad->novedad_id;?>&nbsp;</dd>
+			
+			<dt>Asunto: </dt>
+			<dd><?php echo $this->novedad->asunto;?>&nbsp;</dd>
+		
+			<dt>Fecha creaci&oacute;n: </dt>
+			<dd><?php echo $this->novedad->date_added;?>&nbsp;</dd>
+			
+			<dt>Creado por: </dt>
+			<dd><?php echo $this->novedad->fullname_tip;?>&nbsp;</dd>
+			
+		</dl>
+		
+		<p>Comentarios: <?php echo nl2br($this->novedad->comentarios);?></p>
+	</div>
+</div>

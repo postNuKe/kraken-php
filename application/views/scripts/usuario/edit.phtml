@@ -1,0 +1,20 @@
+<div class="group_actions">
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'materiales-que-entrega', 'id' => $this->user->idUsuario), 'default', true);?>"  title="Materiales que hace entrega" class="">
+		<img src="<?php echo $this->configLayout['iconsWWW'];?>lorry_add.png" />
+	</a>
+</div>
+
+<div id="usuario_edit">
+<?php
+
+$this->form->setAction($this->url());
+echo $this->form;
+?>
+</div>
+<div id="dialog_add_qty" class="window">
+  <div class="d-header">
+  	<label>Cantidad</label>
+    <input id="input_material_add_qty" type="text" value="1" onclick="this.value=''"/>
+    <button name="material_add_qty" id="material_add_qty" type="button">A&ntilde;adir</button>   
+  </div>
+</div>

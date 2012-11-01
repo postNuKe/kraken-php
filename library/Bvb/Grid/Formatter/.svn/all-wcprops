@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter
+END
+Currency.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter/Currency.php
+END
+Date.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter/Date.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter/Array.php
+END
+Image.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter/Image.php
+END
+FormatterInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1445/trunk/library/Bvb/Grid/Formatter/FormatterInterface.php
+END

@@ -1,0 +1,8 @@
+K 13
+svn:mergeinfo
+V 240
+/branches/doctrine/Bvb/Grid/Source/Doctrine.php:883-980
+/branches/jqGrid/library/Bvb/Grid/Source/Doctrine.php:192-453
+/branches/jqGrid/trunk/library/Bvb/Grid/Source/Doctrine.php:197-480
+/trunk/library/Bvb/Bvb/Grid/Source/Doctrine.php:13-880
+END

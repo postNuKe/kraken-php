@@ -1,0 +1,47 @@
+<div id="verbal_view">
+	<div class="group_actions">
+		<a href="
+			<?php echo $this->url(array('controller' => 'export', 
+										'action' => 'verbal', 
+										'id' => $this->verbal->id_verbal), 'default', true);
+			?>" title="Exportar en PDF">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+		</a>
+		<a href="
+			<?php echo $this->url(array('controller' => 'informacion-verbal', 
+										'action' => 'edit', 
+										'id' => $this->verbal->id_verbal), 'default', true);
+			?>" title="Editar">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>edit.png" />
+		</a>
+		
+	</div>
+	<div id="info" class="clear">
+		<dl>			
+			<dt>Nº Registro:</dt>
+			<dd><?php echo $this->verbal->id_verbal;?>&nbsp;</dd>
+			
+			<dt>Emitido por: </dt>
+			<dd><?php echo $this->verbal->fullname_tip;?>&nbsp;</dd>
+			
+			<dt>Material: </dt>
+			<dd><a href="<?php echo $this->url(array('controller' => 'material', 
+										'action' => 'viewmaterial', 
+										'idMaterial' => $this->verbal->id_material), 'default', true);
+			?>" title="Ver Material"><?php echo $this->verbal->material;?></a>&nbsp;</dd>
+			<!-- 
+			<dt>Asunto: </dt>
+			<dd><?php echo $this->verbal->asunto;?>&nbsp;</dd>
+			 -->
+			<dt>Ejercicio: </dt>
+			<dd><?php echo $this->verbal->ejercicio;?>&nbsp;</dd>
+		
+			<dt>Fecha de lo sucedido: </dt>
+			<dd><?php echo $this->verbal->date;?>&nbsp;</dd>
+			
+			
+		</dl>
+		
+		<p>Narracion: <?php echo nl2br($this->verbal->narracion);?></p>
+	</div>
+</div>

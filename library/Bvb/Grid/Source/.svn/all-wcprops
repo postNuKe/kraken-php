@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1456/trunk/library/Bvb/Grid/Source
+END
+Json.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Source/Json.php
+END
+Csv.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1373/trunk/library/Bvb/Grid/Source/Csv.php
+END
+Array.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Source/Array.php
+END
+Xml.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Source/Xml.php
+END
+SourceInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Source/SourceInterface.php
+END
+Doctrine.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Source/Doctrine.php
+END

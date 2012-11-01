@@ -1,0 +1,20 @@
+<div id="usuario_materiales_que_entrega">
+<h2><?php echo $this->user->fullname_dni;?></h2>
+<p>El listado siguiente corresponde a los materiales que entreg&oacute;
+el usuario cuando llegó al grupo. Puede usted entregarle m&aacute;s
+materiales o quitarlos, este es el paso de materiales que se debe hacer entrega
+al usuario antes de irse del Grupo. Verifique los materiales y haga click
+en el botón. Una vez hecho esto se desasignarán los materiales al
+usuario, se darán de baja y se quedarán guardados en el fichero pdf que
+se creará al final.</p>
+<?php
+$this->form->setAction($this->url());
+echo $this->form;
+?></div>
+<div id="dialog_add_qty" class="window">
+<div class="d-header"><label>Cantidad</label> <input
+	id="input_material_add_qty" type="text" value="1"
+	onclick="this.value=''" />
+<button name="material_add_qty" id="material_add_qty" type="button">A&ntilde;adir</button>
+</div>
+</div>

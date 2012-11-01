@@ -1,0 +1,3 @@
+<h2>¿Seguro que quiere eliminar esta Categoría?</h2>
+<p><?php echo $this->categoria->nameTree;?></p>
+<a href="<?php echo $this->url(array('controller' => 'material', 'action' => 'delete-categoria', 'idCategoria' => $this->categoria->idCategoria, 'confirm' => true));?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>delete.png" alt="Eliminar"/></a>

@@ -1,0 +1,68 @@
+<div class="float-left">
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'add'), 'default', true);?>" class="button">
+	<span class="addUser">A&ntilde;adir Usuario</span>
+	</a>
+</div>
+<div class="group_actions float-right text-align-right">
+	<?php 
+	if(!isset($this->get_params['view']) || $this->get_params['view'] == 'list'){
+		$array_view = array('view' => 'icons', 'image' => 'application_view_tile.png', 'name' => 'Ver en formato Fotos');
+	}else{
+		$array_view = array('view' => 'list', 'image' => 'application_view_list.png', 'name' => 'Ver en formato Lista');		
+	}
+	?>
+	
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'index', 'view' => $array_view['view']), 'default', true);?>"  title="<?php echo $array_view['name'];?>" class="">
+		<img src="<?php echo $this->configLayout['iconsWWW'] . $array_view['image'];?>" />
+	</a>
+	
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'create-report'));?>"  title="Crear Informe de Usuarios" class="">
+		<img src="<?php echo $this->configLayout['iconsWWW'];?>report.png" />
+	</a>
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'create-report2'));?>"  title="Crear Informe de Armas" class="">
+		<img src="<?php echo $this->configLayout['iconsWWW'];?>report.png" />
+	</a>
+	<?php 
+	if(!isset($this->get_params['activo']) || $this->get_params['activo']){
+		$array_active = array('status' => 0, 'image' => 'status_offline.png', 'name' => 'Ver Usuarios Inactivos');
+	}else{
+		$array_active = array('status' => 1, 'image' => 'status_online.png', 'name' => 'Ver Usuarios Activos');		
+	}
+	?>
+	<a href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'index', 'activo' => $array_active['status']), 'default', true);?>"  title="<?php echo $array_active['name'];?>" class="">
+		<img src="<?php echo $this->configLayout['iconsWWW'] . $array_active['image'];?>" />
+	</a>
+</div>
+<?php
+if($this->get_params['view'] == 'icons'){
+	$col = 0;
+?>
+<table class="clear imgcaption">
+    <?php foreach ($this->entries as $entry): ?>
+    	<?php $col++; if($col == 1){?>
+	    	<tr>
+	    <?php }?>
+	    		<td class="col">
+		<a href="
+			<?php echo $this->url(array('controller' => 'usuario', 
+										'action' => 'view', 
+										'id' => $entry->idUsuario), 'default', true);
+			?>" title="<?php echo $this->escape($entry->empleo_nombre . ' ' . $entry->nombre . ' ' . $entry->apellidos)?>">
+			<img src="<?php echo $this->pathPicture('usuarios', $entry->idUsuario);?>" alt="<?php echo $this->escape($entry->empleo_nombre . ' ' . $entry->nombre . ' ' . $entry->apellidos)?>"/>
+		</a>
+	    		
+		
+		    </td>
+		<?php if($col == 3){
+			$col = 0;
+		?>
+			</tr>
+		<?php }?>
+		
+	<?php endforeach ?>
+</table>
+<?php
+}else{
+?>
+	<div id="grid"><?php echo $this->grid; ?></div>
+<?php }?>

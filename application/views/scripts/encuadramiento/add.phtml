@@ -1,0 +1,35 @@
+<div id="encuadramiento">
+	<?php 
+	if($this->id_encuadramiento > 0){		
+	?>
+		<div class="group_actions">
+				<a href="<?php echo $this->url(array('controller' => 'export', 'action' => 'encuadramiento', 'ide' => $this->id_encuadramiento), 'default', true);?>" title="<?php echo $this->translate->_('Export to PDF');?>">
+					<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+				</a>
+		</div>
+	<?php 
+	}
+	if(isset($this->id_encuadramiento) && $this->id_encuadramiento > 0){
+	?>
+		<a href="<?php echo $this->url(array('controller' => 'encuadramiento', 'action' => 'add-vehiculo', 'ide' => $this->id_encuadramiento), 'default', true);?>" class="button float-left">
+		<span class="addVehiculo"><?php echo $this->translate->_('Add Car');?></span>
+		</a>   
+		<a href="<?php echo $this->url(array('controller' => 'encuadramiento', 'action' => 'auto', 'ide' => $this->id_encuadramiento), 'default', true);?>" class="button float-left">
+		<span class="autoEncuadramiento"><?php echo $this->translate->_('Automatic Creation');?></span>
+		</a>   
+	<?php }?>   
+	<?php echo $this->form;?>    
+	<fieldset id="leyenda"><legend><?php echo $this->translate->_('Leyend');?></legend> 
+	<dl>
+		<dt>C</dt><dd>Conductor</dd>
+		<dt>T</dt><dd>Transmisiones</dd>
+		<dt>B</dt><dd>Bocacha</dd>
+		<dt>E</dt><dd>Escudo</dd>
+		<dt>CB</dt><dd>Chaleco Balístico</dd>
+		<dt>AL</dt><dd>Arma Larga</dd>
+		<dt>AC</dt><dd>Arma Corta</dd>
+		<dt>S</dt><dd>Seguridad</dd>
+		<dt>SQB</dt><dd>Se Queda en Base</dd>
+	</dl>
+	</fieldset>             
+</div>

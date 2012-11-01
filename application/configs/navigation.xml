@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+    	<title>Armeria</title>
+    	<id></id>
+        <label>Armeria</label>
+        <controller>index</controller>
+        <action>index</action>
+        <pages>
+            <usuario>
+            	<title>Usuarios</title>
+            	<id>usuario_index</id>
+                <label>Usuarios</label>
+                <controller>usuario</controller>
+                <action>index</action>
+                <pages>
+                    <add>
+		            	<title>Añadir Usuario</title>
+		            	<id>usuario_add</id>
+                        <label>Añadir</label>
+                        <controller>usuario</controller>
+                        <action>add</action>
+                    </add>
+                    <edit>
+		            	<title>Editar Usuario</title>
+		            	<id>usuario_edit</id>
+                        <label>Editar</label>
+                        <controller>usuario</controller>
+                        <action>edit</action>
+                        <!-- 
+                        <params>
+                            <id>2</id>
+                        </params> 
+                        -->
+                    </edit>
+                    <materiales-que-entrega>
+		            	<title>Materiales Que Entrega</title>
+		            	<id>usuario_materiales-que-entrega</id>
+                        <label>Materiales Que Entrega</label>
+                        <controller>usuario</controller>
+                        <action>materiales-que-entrega</action>
+                    </materiales-que-entrega>
+                    <usuario-inactivo-devolver-material>
+		            	<title>Usuario Inactivo - Materiales a devolver a la Unidad</title>
+		            	<id>usuario_usuario-inactivo-devolver-material</id>
+                        <label>Usuario Inactivo - Materiales a devolver a la Unidad</label>
+                        <controller>usuario</controller>
+                        <action>usuario-inactivo-devolver-material</action>
+                    </usuario-inactivo-devolver-material>
+                    <usuario-inactivo-asignar-material>
+		            	<title>Usuario Inactivo - Materiales a asignar al usuario</title>
+		            	<id>usuario_usuario-inactivo-asignar-material</id>
+                        <label>Usuario Inactivo - Materiales a asignar al usuario</label>
+                        <controller>usuario</controller>
+                        <action>usuario-inactivo-asignar-material</action>
+                    </usuario-inactivo-asignar-material>
+                    <view>
+		            	<title>Visualizar Usuario</title>
+		            	<id>usuario_view</id>
+                        <label>Visualizar</label>
+                        <controller>usuario</controller>
+                        <action>view</action>                    	
+                    </view>
+                    <create-report>
+		            	<title>Informe de armas de los usuarios activos</title>
+		            	<id>usuario_create-report</id>
+                        <label>Informe de armas de los usuarios activos</label>
+                        <controller>usuario</controller>
+                        <action>create-report</action>                    	
+                    </create-report>                                        
+                    <create-report2>
+		            	<title>Informe de armas</title>
+		            	<id>usuario_create-report2</id>
+                        <label>Informe de armas</label>
+                        <controller>usuario</controller>
+                        <action>create-report2</action>                    	
+                    </create-report2>                                        
+                    <delete>
+		            	<title>Eliminar Usuario</title>
+		            	<id>usuario_delete</id>
+                        <label>Eliminar Usuario</label>
+                        <controller>usuario</controller>
+                        <action>delete</action>                    	
+                    </delete>                                        
+                </pages>
+            </usuario>
+			<material>
+            	<title>Catálogo</title>
+            	<id>material_index</id>			
+				<label>Catálogo</label>
+				<controller>material</controller>
+				<action>index</action>
+				<pages>
+					<addcategoria>
+		            	<title>Añadir Categoria</title>
+		            	<id>material_addcategoria</id>
+	                	<label>Añadir Categoria</label>
+	                    <controller>material</controller>
+	                    <action>addcategoria</action>
+	                </addcategoria>
+					<editcategoria>
+		            	<title>Editar Categoria</title>
+		            	<id>material_editcategoria</id>
+	                	<label>Editar Categoria</label>
+	                    <controller>material</controller>
+	                    <action>editcategoria</action>
+	                </editcategoria>
+					<addmaterial>
+		            	<title>Añadir Material</title>
+		            	<id>material_addmaterial</id>
+	                	<label>Añadir Material</label>
+	                    <controller>material</controller>
+	                    <action>addmaterial</action>
+	                </addmaterial>
+					<editmaterial>
+		            	<title>Editar Material</title>
+		            	<id>material_editmaterial</id>
+	                	<label>Editar Material</label>
+	                    <controller>material</controller>
+	                    <action>editmaterial</action>
+	                </editmaterial>
+                    <viewmaterial>
+		            	<title>Ver Material</title>
+		            	<id>material_viewmaterial</id>
+                        <label>Visualizar Material</label>
+                        <controller>material</controller>
+                        <action>viewmaterial</action>                    	
+                    </viewmaterial>
+                    <estado>
+		            	<title>Estados del Material</title>
+		            	<id>material_estado</id>
+                        <label>Estados del Material</label>
+                        <controller>material</controller>
+                        <action>estado</action>                    	
+                    </estado>
+                    <view-all-estados>
+		            	<title>Ver todos los estados de los materiales</title>
+		            	<id>material_view-all-estados</id>
+                        <label>Ver todos los estados de los materiales</label>
+                        <controller>material</controller>
+                        <action>view-all-estados</action>                    	
+                    </view-all-estados>
+                    <delete-categoria>
+		            	<title>Eliminar Categoria</title>
+		            	<id>material_delete-categoria</id>
+                        <label>Eliminar Categoria</label>
+                        <controller>material</controller>
+                        <action>delete-categoria</action>                    	
+                    </delete-categoria>                                        
+                    <delete-material>
+		            	<title>Eliminar Material</title>
+		            	<id>material_delete-material</id>
+                        <label>Eliminar Material</label>
+                        <controller>material</controller>
+                        <action>delete-material</action>                    	
+                    </delete-material>                                        
+				</pages>
+			</material>
+			<salida-material>
+            	<title>Salida de Material</title>
+            	<id>salida-material_index</id>
+				<label>Salida de Material</label>
+				<controller>salida-material</controller>
+				<action>index</action>
+				<pages>
+                    <add-step1>
+		            	<title>Añadir Datos de la Salida</title>
+		            	<id>salida-material_add-step1</id>
+                        <label>Añadir Datos de la Salida</label>
+                        <controller>salida-material</controller>
+                        <action>add-step1</action>                    	
+                    </add-step1>				
+                    <edit-step1>
+		            	<title>Editar Datos de la Salida</title>
+		            	<id>salida-material_edit-step1</id>
+                        <label>Editar Datos de la Salida</label>
+                        <controller>salida-material</controller>
+                        <action>edit-step1</action>                    	
+                    </edit-step1>				
+                    <edit-step2>
+		            	<title>Asignar los Materiales</title>
+		            	<id>salida-material_edit-step2</id>
+                        <label>Asignar los Materiales</label>
+                        <controller>salida-material</controller>
+                        <action>edit-step2</action>                    	
+                    </edit-step2>				
+                    <viewsalida>
+		            	<title>Ver Salida</title>
+		            	<id>salida-material_view</id>
+                        <label>Visualizar</label>
+                        <controller>salida-material</controller>
+                        <action>view</action>                    	
+                    </viewsalida>
+                    <delete>
+		            	<title>Eliminar Salida</title>
+		            	<id>salida_delete</id>
+                        <label>Eliminar Salida</label>
+                        <controller>salida</controller>
+                        <action>delete</action>                    	
+                    </delete>                                                            
+				</pages>
+			</salida-material>
+			<gasto-material>
+            	<title>Gasto de Material</title>
+            	<id>gasto-material_index</id>
+				<label>Gasto de Material</label>
+				<controller>gasto-material</controller>
+				<action>index</action>
+				<pages>
+                    <add>
+		            	<title>Añadir Gasto de Material</title>
+		            	<id>gasto-material_add</id>
+                        <label>Añadir Gasto de Material</label>
+                        <controller>gasto-material</controller>
+                        <action>add</action>                    	
+                    </add>							
+				</pages>
+			</gasto-material>
+			<user>
+				<title>Mi Cuenta</title>
+				<id>user_index</id>
+				<label>Mi Cuenta</label>
+				<controller>user</controller>
+				<action>index</action>
+				<pages>
+                    <login>
+                    	<title>Login</title>
+                    	<id>user_login</id>
+                        <label>Entrar en Kraken</label>
+                        <controller>user</controller>
+                        <action>login</action>                    	
+                    </login>				
+                    <logout>
+                    	<title>Logout</title>
+                    	<id>user_logout</id>
+                        <label>Desloguearse</label>
+                        <controller>user</controller>
+                        <action>logout</action>                    	
+                    </logout>				
+                    <edit>
+                    	<title>Editar Contraseña</title>
+                    	<id>user_edit</id>
+                        <label>Editar Contraseña</label>
+                        <controller>user</controller>
+                        <action>edit</action>                    	
+                    </edit>				
+				</pages>
+			</user>
+			<novedad>
+            	<title>Novedades</title>
+            	<id>novedad_index</id>
+				<label>Novedades</label>
+				<controller>novedad</controller>
+				<action>index</action>
+				<pages>
+                    <add>
+		            	<title>Añadir Novedad</title>
+		            	<id>novedad_add</id>
+                        <label>Añadir Novedad</label>
+                        <controller>novedad</controller>
+                        <action>add</action>                    	
+                    </add>							
+                    <view>
+		            	<title>Ver Novedad</title>
+		            	<id>novedad_view</id>
+                        <label>Ver Novedad</label>
+                        <controller>novedad</controller>
+                        <action>view</action>                    	
+                    </view>							
+				</pages>
+			</novedad>
+			<recuento-material>
+            	<title>Recuento de Material</title>
+            	<id>recuento-material_index</id>
+				<label>Recuento de Material</label>
+				<controller>recuento-material</controller>
+				<action>index</action>
+				<pages>
+                    <add>
+		            	<title>Añadir Recuento de Material</title>
+		            	<id>recuento-material_add</id>
+                        <label>Añadir Recuento de Material</label>
+                        <controller>recuento-material</controller>
+                        <action>add</action>                    	
+                    </add>							
+				</pages>
+			</recuento-material>
+			<search>
+            	<title>Búsqueda</title>
+            	<id>search_index</id>
+				<label>Búsqueda</label>
+				<controller>search</controller>
+				<action>index</action>				
+			</search>
+						
+			<options>
+            	<title>Opciones de Kraken</title>
+            	<id>options_index</id>
+				<label>Opciones de Kraken</label>
+				<controller>options</controller>
+				<action>index</action>		
+                <pages>
+                    <backup-db-list>
+		            	<title>Lista de Backups</title>
+		            	<id>options_backup-db-list</id>
+                        <label>Lista de Backups</label>
+                        <controller>options</controller>
+                        <action>backup-db-list</action>
+                    </backup-db-list>
+                    <report-edit>
+		            	<title>Informes</title>
+		            	<id>options_report-edit</id>
+                        <label>Informes</label>
+                        <controller>options</controller>
+                        <action>report-edit</action>
+                    </report-edit>
+                    <users>
+		            	<title>Usuarios</title>
+		            	<id>options_users</id>
+                        <label>Usuarios</label>
+                        <controller>options</controller>
+                        <action>users</action>
+                    </users>
+                    <cuadrante-load>
+		            	<title>Cuadrante</title>
+		            	<id>options_cuadrante-load</id>
+                        <label>Cuadrante</label>
+                        <controller>options</controller>
+                        <action>cuadrante-load</action>
+                    </cuadrante-load>                    
+                    <estado-material>
+		            	<title>Estado de los Materiales</title>
+		            	<id>options_estado-material</id>
+                        <label>Estado de los Materiales</label>
+                        <controller>options</controller>
+                        <action>estado-material</action>
+                    </estado-material>                    
+                    <vehiculo-tipos-disponibilidad>
+                        <title>Tipos de Disponibilidad para los Vehiculos</title>
+                        <id>options_vehiculo-tipos-disponibilidad</id>
+                        <label>Tipos de Disponibilidad para los Vehiculos</label>
+                        <controller>options</controller>
+                        <action>vehiculo-tipos-disponibilidad</action>
+                    </vehiculo-tipos-disponibilidad>                    
+                    <vehiculo-disponibilidad-edit>
+                        <title>Editar Disponibilidad</title>
+                        <id>options_vehiculo-disponibilidad-edit</id>
+                        <label>Editar Disponibilidad</label>
+                        <controller>options</controller>
+                        <action>vehiculo-disponibilidad-edit</action>
+                    </vehiculo-disponibilidad-edit>                    
+                    <vehiculo-disponibilidad-delete>
+                        <title>Eliminar Disponibilidad</title>
+                        <id>options_vehiculo-disponibilidad-delete</id>
+                        <label>Eliminar Disponibilidad</label>
+                        <controller>options</controller>
+                        <action>vehiculo-disponibilidad-delete</action>
+                    </vehiculo-disponibilidad-delete>                    
+                    <otros>
+		            	<title>Otros Datos de Configuración</title>
+		            	<id>options_otros</id>
+                        <label>Otros Datos de Configuración</label>
+                        <controller>options</controller>
+                        <action>otros</action>
+                    </otros>  
+                    <vehiculos>
+		            	<title>Listado Vehiculos</title>
+		            	<id>options_index</id>
+                        <label>Listado Vehiculos</label>
+                        <controller>vehiculo</controller>
+                        <action>index</action>
+                    </vehiculos>                    
+                                      
+				</pages>						
+			</options>
+
+			<informacion-verbal>
+            	<title>Información Verbal</title>
+            	<id>informacion-verbal_index</id>
+				<label>Información Verbal</label>
+				<controller>informacion-verbal</controller>
+				<action>index</action>
+				<pages>
+                    <add>
+		            	<title>Añadir Información Verbal</title>
+		            	<id>informacion-verbal_add</id>
+                        <label>Añadir Información Verbal</label>
+                        <controller>informacion-verbal</controller>
+                        <action>add</action>                    	
+                    </add>							
+                    <edit>
+		            	<title>Editar Información Verbal</title>
+		            	<id>informacion-verbal_edit</id>
+                        <label>Editar Información Verbal</label>
+                        <controller>informacion-verbal</controller>
+                        <action>edit</action>                    	
+                    </edit>						
+                    <view>
+		            	<title>Ver Información Verbal</title>
+		            	<id>informacion-verbal_view</id>
+                        <label>Ver Información Verbal</label>
+                        <controller>informacion-verbal</controller>
+                        <action>view</action>                    	
+                    </view>							
+				</pages>
+			</informacion-verbal>
+			<notes>
+            	<title>Notas</title>
+            	<id>notes_index</id>
+				<label>Notas</label>
+				<controller>notes</controller>
+				<action>index</action>				
+			</notes>		
+			<sa9>
+            	<title>Documentos SA-9</title>
+            	<id>sa9_index</id>
+				<label>Documentos SA-9</label>
+				<controller>sa9</controller>
+				<action>index</action>				
+				<pages>
+                    <add>
+		            	<title>Generar Documento SA-9</title>
+		            	<id>sa9_add</id>
+                        <label>Generar Documento SA-9</label>
+                        <controller>sa9</controller>
+                        <action>add</action>                    	
+                    </add>	
+                </pages>						
+			</sa9>		
+			<vehiculo>
+            	<title>Listado Vehículos</title>
+            	<id>vehiculo_index</id>
+				<label>Listado Vehículos</label>
+				<controller>vehiculo</controller>
+				<action>index</action>				
+				<pages>
+                    <add>
+		            	<title>Añadir/Editar Vehículo</title>
+		            	<id>vehiculo_add</id>
+                        <label>Añadir/Editar Vehículo</label>
+                        <controller>vehiculo</controller>
+                        <action>add</action>                    	
+                    </add>	
+                    <vehiculo>
+		            	<title>Eliminar Vehículo</title>
+		            	<id>vehiculo_delete</id>
+                        <label>Eliminar Vehículo</label>
+                        <controller>vehiculo</controller>
+                        <action>delete</action>                    	
+                    </vehiculo>	
+                </pages>						
+			</vehiculo>		
+			<encuadramiento>
+            	<title>Listado de Encuadramientos</title>
+            	<id>encuadramiento_index</id>
+				<label>Listado de Encuadramientos</label>
+				<controller>encuadramiento</controller>
+				<action>index</action>				
+				<pages>
+                    <add>
+		            	<title>Añadir/Editar Encuadramiento</title>
+		            	<id>encuadramiento_add</id>
+                        <label>Añadir/Editar Encuadramiento</label>
+                        <controller>encuadramiento</controller>
+                        <action>add</action>                    	
+                    </add>	
+                    <add-vehiculo>
+		            	<title>Añadir/Editar Vehículo al Encuadramiento</title>
+		            	<id>encuadramiento_add-vehiculo</id>
+                        <label>Añadir/Editar Vehículo al Encuadramiento</label>
+                        <controller>encuadramiento</controller>
+                        <action>add-vehiculo</action>                    	
+                    </add-vehiculo>	
+                    <auto>
+		            	<title>Creación Automática de Encuadramiento</title>
+		            	<id>encuadramiento_auto</id>
+                        <label>Creación Automática de Encuadramiento</label>
+                        <controller>encuadramiento</controller>
+                        <action>auto</action>                    	
+                    </auto>	
+                    <delete>
+		            	<title>Eliminar Encuadramiento</title>
+		            	<id>encuadramiento_delete</id>
+                        <label>Eliminar Encuadramiento</label>
+                        <controller>encuadramiento</controller>
+                        <action>delete</action>                    	
+                    </delete>	
+                </pages>						
+			</encuadramiento>		
+        </pages>
+    </nav>
+</configdata>

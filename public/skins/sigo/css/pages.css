@@ -1,0 +1,116 @@
+/* ============================== USUARIOS =========================================== */
+
+#usuario_list{
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#CC9966 none repeat scroll 0 0;
+border:1px solid #333333;
+color:#000000;
+margin:0.5em 12px;
+padding:0;
+text-align:center;
+width:auto;
+}
+
+#usuario_list .table-row{
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FFFFCC none repeat scroll 0 0;
+border:1px solid #000000;
+color:#000000;
+margin:0 auto;
+padding:0;
+text-align:center;
+width:96%;
+}
+
+#usuario_list .table-row .col{
+border:medium none;
+margin:0;
+padding:0;
+width:50%;
+background-color: #FFFFCC;
+}
+
+.pages fieldset{
+	border: 1px solid #808080;
+	margin: 1em 0em 1em 0em;
+	-moz-border-radius: 0.5em;
+	width: 100%;
+}
+
+.pages fieldset legend{
+	margin-left: 0.6em;
+	font-weight: bold;
+	padding: 0 0.3em 0 0.2em;
+}
+/* View
+-----------------------------------------------------------------------------*/ 
+
+#usuario_view #info,
+#novedad_view #info,
+#info,
+#salida_view #info{
+	/*border: 1px solid #000;*/
+	padding: 0 2em;
+	clear: both;
+}
+	#info img,
+	#usuario_view #info img{
+		margin: 0 0 10px 10px;
+		border: 1px solid #666;
+		padding: 2px;
+		float: right;
+		/*width: 300px;
+		height: 225px;*/
+	}
+	
+	#info dl,
+	#usuario_view #info dl,
+	#novedad_view #info dl,
+	#salida_view #info dl {
+		margin-left:5em;
+	}
+	
+	#info dl dt,
+	#usuario_view #info dl dt,
+	#novedad_view #info dl dt,
+	#salida_view #info dl dt {
+		float:left; 
+		font-weight:bold; 
+		margin-right:10px; 
+		padding:5px;  
+		width:100px; 
+		text-align: right;
+		text-decoration: underline;
+	}
+	
+	#info dl dd,
+	#usuario_view #info dl dd,
+	#novedad_view #info dl dd,
+	#salida_view #info dl dd {
+		margin:2px 0; 
+		padding:3px 0;
+		font-size: 1.5em;
+	}	
+	
+/* ============================== MATERIALES =========================================== */
+
+#header-material{
+	width: 450px;
+}
+
+#material-index table#icons{
+	margin-top: 1em;
+}
+#material-index table#icons tr td.col{
+		text-align: center;
+		padding: 0.5em;
+}
+/* ============================== AÑADIR/EDITAR ENCUADRAMIENTO =========================================== */
+
+#encuadramiento textarea{
+	max-height: 4em;
+}

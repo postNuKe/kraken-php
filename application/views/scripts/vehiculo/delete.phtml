@@ -1,0 +1,10 @@
+<h2>¿Seguro que quiere eliminar este Vehículo?</h2>
+<p><?php echo $this->vehiculo->nombre . ' [' . $this->vehiculo->matricula . ']';?></p>
+<a href="<?php 
+    echo $this->url(array(
+        'controller' => 'vehiculo', 
+        'action' => 'delete', 
+        'id' => $this->vehiculo->id_vehiculo, 
+        'confirm' => true));?>">
+    <img src="<?php echo $this->configLayout['iconsWWW'];?>delete.png" alt="Eliminar"/>
+</a>

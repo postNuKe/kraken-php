@@ -1,0 +1,146 @@
+/* 
+	Grey Suits you Sir. Please host the images on your own server.
+	written by Stuart Colville http://www.muffinresearch.co.uk
+*/
+
+#grid
+{
+clear: both;
+}
+
+#grid table,
+#grid td
+{
+	border               : 1px solid #CCC;
+	border-collapse      : collapse;
+    font                 : 10px "Tahoma", "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+}
+#grid table
+{
+	border                :none;
+	border                :1px solid #CCC;
+}
+#grid thead th,
+#grid tbody th
+{
+	background            : #FFF url(/images/layout/grid/th_bck.gif) repeat-x;
+    color                 : #666;  
+	padding               : 5px 10px;
+    border-left           : 1px solid #CCC;
+}
+#grid tbody th
+{
+  background            : #fafafb;
+  border-top            : 1px solid #CCC;
+  text-align            : left;
+  font-weight           : normal;
+}
+#grid tbody tr td
+{
+	padding               : 5px 10px;
+  	color                 : #666;
+}
+#grid tbody tr:hover
+{
+  background            : #FFF url(/images/layout/grid/tr_bck.gif) repeat;
+}
+
+#grid tbody tr:hover td
+{
+  color                 : #454545;
+}
+#grid tfoot td,
+#grid tfoot th
+{
+  border-left           : none;
+  border-top            : 1px solid #CCC;
+	padding               : 4px;
+  background            : #FFF url(/images/layout/grid/foot_bck.gif) repeat;
+  color                 : #666;
+}
+#grid caption
+{
+	text-align            : left;
+	font-size             : 120%;
+	padding               : 10px 0;
+	color                 : #666;
+}
+#grid table a:link
+{
+	color                 : #666;
+}
+#grid table a:visited
+{
+	color                 : #666;
+}
+#grid table a:hover
+{
+	color                 : #003366;
+	text-decoration       : none;
+}
+#grid table a:active
+{
+	color                 : #003366;
+}
+
+
+
+#grid #categorias tr td.nombre{
+	background: url(/images/layout/icons/folder.png) no-repeat 5px center;
+	padding:0 20px 0 25px;
+	white-space:nowrap;
+	text-align: left;
+}
+
+#grid #materiales tr td.nombre{
+	font-weight: bold;
+	white-space:nowrap;
+}
+#grid #materiales tr td.cantidad,
+#grid tr td.empleo,
+#grid tr td.action{
+	white-space:nowrap;
+} 
+#grid tr td.action{
+	width: 1px;
+}
+#grid #materiales tr.material_all_assigned,
+#grid #materiales td.red,
+#grid tbody tr.material_all_assigned:hover
+{
+	/*background: #FFEFEF;*/
+	background: #FFDFDF;
+}
+
+#grid td.hbar {
+	text-align: center;
+	background: #FFF url(/images/layout/grid/hbar.jpg);
+	font-variant: small-caps;
+}
+
+#grid td.hbar div {
+	padding: 4px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#grid tr td.date{
+	width: 110px;
+}
+
+#grid tr td.fullname{
+	width: 250px;
+}
+
+#grid #salidas tr.salida_active,
+#grid tbody tr.salida_active:hover
+{
+	/*background: #FFEFEF;*/
+	background: #DFF2BF;
+}
+#grid #salidas tr.salida_past,
+#grid tbody tr.salida_past:hover
+{
+	/*background: #FFEFEF;*/
+	background: #FFDFDF;
+}

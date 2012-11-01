@@ -1,0 +1,103 @@
+<div id="material-index">
+	<div class="group_actions">
+		<?php 
+		if($this->categories_count == 0){
+			if(!isset($this->get_params['view']) || $this->get_params['view'] == 'list'){
+				$array_view = array('view' => 'icons', 'image' => 'application_view_tile.png', 'name' => $this->translate('View Pictures'));
+			}else{
+				$array_view = array('view' => 'list', 'image' => 'application_view_list.png', 'name' => $this->translate('View List'));		
+			}
+		?>		
+			<a href="<?php echo $this->url(array('controller' => 'material', 'action' => 'index', 'id_cat' => $this->get_params['id_cat'],'view' => $array_view['view']), 'default', true);?>"  title="<?php echo $array_view['name'];?>" class="">
+				<img src="<?php echo $this->configLayout['iconsWWW'] . $array_view['image'];?>" />
+			</a>
+		<?php } ?>
+	
+		<a href="
+			<?php echo $this->url(array('controller' => 'material', 
+										'action' => 'view-all-estados'), 'default', true);
+			?>" title="<?php echo $this->translate('View All Status');?>">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>pill.png" />
+		</a>
+	</div>
+	<div id="header-material">
+		<?php
+			//si hay categorias mostrar el enlace de añadir categoria
+			if($this->categories_count >= 0 && $this->materiales_count == 0){
+				$url_params_2 = array_merge(array('controller' => 'material', 'action' => 'addcategoria'), (isset($this->categories_url_params_1) ? $this->categories_url_params_1 : array()));
+		?>
+				<a href="<?php echo $this->url($url_params_2, 'default', true);?>" class="button float-left"><span class="addCategorie"><?php echo $this->translate->_('Add Category');?></span></a>
+		<?php
+			}
+			//si no hay categorías mirar si hay material
+			if($this->categories_count == 0){
+				$url_params_2 = '';
+				$url_params_2 = array_merge(array('controller' => 'material', 'action' => 'addmaterial'), (isset($this->categories_url_params_1) ? $this->categories_url_params_1 : array()));
+		?>
+				<a href="<?php echo $this->url($url_params_2, 'default', true);?>" class="button float-left"><span class="add"><?php echo $this->translate->_('Add Material');?></span></a>
+		<?php
+			}
+		?>
+	</div>
+	
+	<div id="categorias_tree">
+		<?php 
+			echo $this->CategoriesMenu($this->catArray);
+			//echo $this->catTree;
+		?>
+	</div>
+	<?php
+	if($this->get_params['view'] == 'icons' && $this->categories_count == 0){
+		$col = 0;
+	?>
+		<table id="icons" class="clear imgcaption">
+		    <?php foreach ($this->entries as $entry): ?>
+		    	<?php $col++; if($col == 1){?>
+			    	<tr>
+			    <?php }?>
+			    		<td class="col">
+							<a href="
+								<?php echo $this->url(array('controller' => 'material', 
+															'action' => 'viewmaterial', 
+															'idMaterial' => $entry->idMaterial), 'default', true);
+								?>" title="<?php echo $this->escape($entry->nombre . ' ' . $entry->numeroSerie . ' ' . $entry->talla)?>">
+								<img src="<?php echo $this->pathPicture('materiales', $entry->idMaterial);?>" alt="<?php echo $this->escape($entry->nombre . ' ' . $entry->numeroSerie . ' ' . $entry->talla)?>"/>
+							</a>
+			    		
+				
+				    </td>
+				<?php if($col == 3){
+					$col = 0;
+				?>
+					</tr>
+				<?php }?>
+				
+			<?php endforeach ?>
+		</table>
+		<!-- 
+		<div id="usuario_list" class="clear">
+		    <?php foreach ($this->entries as $entry): ?>
+		    	<?php $col++; if($col == 1){?>
+			    	<div class="table-row clear">
+			    		<div class="col float-left">
+			    <?php }else{ ?>
+			    		<div class="col float-right">
+			    <?php } 
+				    	echo $entry->nombre;
+				?>
+				    </div>
+				<?php if($col == 2){
+					$col = 0;
+				?>
+					</div>
+				<?php }?>
+				
+			<?php endforeach ?>
+		</div>
+		 -->
+	<?php
+	}else{
+	?>	
+		<div id="grid"><?php echo $this->grid;?></div>
+	<?php } ?>
+</div>

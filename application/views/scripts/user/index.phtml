@@ -1,0 +1,7 @@
+<?php if($this->identity == null) { ?>
+    <p>Para loguearse <a href='/user/login'>click aqu&iacute;</a></p>
+<?php }else{ ?>
+    <p>Bienvenido de nuevo <?php echo $this->identity->nombre;?></p>
+    <p>Para cambiar la contrase&ntilde;a <a href='/user/edit'>click aqu&iacute;</a></p>
+    <p>Para desloguearse <a href='/user/logout'>click aqu&iacute;</a></p>
+<?php } ?>

@@ -1,0 +1,11 @@
+K 12
+svn:keywords
+V 6
+Id Rev
+K 13
+svn:mergeinfo
+V 176
+/branches/doctrine/Bvb/Grid/Extra/Column.php:883-963
+/branches/jqGrid/library/Bvb/Grid/Extra/Column.php:192-453
+/branches/jqGrid/trunk/library/Bvb/Grid/Extra/Column.php:197-480
+END

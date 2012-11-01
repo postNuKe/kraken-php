@@ -1,0 +1,3 @@
+<h2>¿Seguro que quiere eliminar este encuadramiento?</h2>
+<p><?php echo $this->asunto;?></p>
+<a href="<?php echo $this->url(array('controller' => 'encuadramiento', 'action' => 'delete', 'ide' => $this->id_encuadramiento, 'confirm' => true));?>"><img src="<?php echo $configLayout['iconsWWW'];?>delete.png" alt="Eliminar"/></a>

@@ -1,0 +1,9 @@
+<h3><?php echo $this->material;?></h3>
+<div id="grid">
+<?php 
+	foreach($this->grids as $key => $val){
+		echo '<h4 class="estado">' . $val['label'] . '</h4>';
+		echo $val['grid']->deploy();
+	}
+?>
+</div>

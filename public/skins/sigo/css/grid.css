@@ -1,0 +1,208 @@
+@CHARSET "ISO-8859-1";
+/* 
+	Grey Suits you Sir. Please host the images on your own server.
+	written by Stuart Colville http://www.muffinresearch.co.uk
+*/
+
+#grid
+{
+clear: both;
+}
+
+#grid table,
+#grid td
+{
+	border               : 1px solid #CCC;
+	border-collapse      : collapse;
+    font                 : 10px "Tahoma", "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+}
+#grid table
+{
+	border                :none;
+	border                :1px solid #CCC;
+	margin-top: 1em;
+	width: 100%;
+}
+#grid thead th,
+#grid tbody th
+{
+	background            : #FFF url(/images/layout/grid/th_bck.gif) repeat-x;
+    color                 : #fff;  
+	padding               : 5px 10px;
+    border-left           : 1px solid #CCC;
+}
+#grid tbody th
+{
+  background            : #499075;
+  border-top            : 1px solid #CCC;
+  text-align            : left;
+  font-weight           : bold;
+}
+#grid tbody tr td
+{
+	padding               : 5px 10px;
+  	/*color                 : #000;*/
+}
+#grid tbody tr:hover
+{
+  background            : #fff2ca;
+}
+
+#grid tbody tr:hover td
+{
+  /*color                 : #454545;*/
+}
+#grid tfoot td,
+#grid tfoot th
+{
+  border-left           : none;
+  border-top            : 1px solid #CCC;
+	padding               : 4px;
+  background            : #FFF url(/images/layout/grid/foot_bck.gif) repeat;
+  color                 : #000;
+}
+#grid caption
+{
+	text-align            : left;
+	font-size             : 120%;
+	padding               : 10px 0;
+	color                 : #000;
+}
+#grid table a:link
+{
+	color                 : #000;
+}
+#grid table a:visited
+{
+	color                 : #000;
+}
+#grid table a:hover
+{
+	color                 : #499075;
+	text-decoration       : none;
+}
+#grid table a:active
+{
+	color                 : #499075;
+}
+
+
+
+#grid #categorias tr td.nombre{
+	background: url(/images/layout/icons/folder.png) no-repeat 5px center;
+	padding:0 20px 0 25px;
+	white-space:nowrap;
+	text-align: left;
+}
+
+#grid #materiales tr td.nombre{
+	font-weight: bold;
+	white-space:nowrap;
+}
+#grid #materiales tr td.cantidad,
+#grid tr td.empleo,
+#grid tr td.nombre,
+#grid tr td.apellidos,
+#grid tr td.action{
+	white-space:nowrap;
+} 
+#grid tr td.action{
+	width: 1px;
+}
+#grid tr td.input_mini{
+	width: 10px;	
+}
+#grid tr td.input_mini input[type="text"]{
+	width: 50px;
+}
+#grid #materiales tr.material_all_assigned,
+#grid #materiales td.red,
+#grid tbody tr.material_all_assigned:hover
+{
+	/*background: #FFEFEF;*/
+	background: #FF7F7F;
+}
+
+#grid td.hbar {
+	text-align: center;
+	background: #b0c4a8;
+	font-variant: small-caps;
+}
+
+#grid td.hbar div {
+	padding: 4px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#grid tr td.date{
+	width: 95px;
+}
+#grid tr td.date2{
+	width: 68px;
+}
+
+#grid tr td.empleo{
+	width: 20px;
+}
+#grid tr td.apellidos{
+	width: 50px;
+}
+#grid tr td.nombre{
+	width: 50px;
+}
+#grid tr td.tip{
+	width: 50px;
+}
+
+#grid tr td.num_registro{
+	width: 90px;
+}
+#grid tr td.fullname{
+	width: 250px;
+}
+#grid tr td.fullname_tip{
+	width: 300px;
+}
+#grid tr td.cantidad{
+	width: 50px;	
+}
+#grid tr td.edit,
+#grid tr td.delete{
+	width: 10px;
+}
+#grid #salidas tr.salida_active,
+#grid tbody tr.salida_active:hover
+{
+	/*background: #FFEFEF;*/
+	background: #DFF2BF;
+}
+
+#grid tr{
+	background: #fff;
+}
+
+#grid tr.alt{
+	background: #e9ebeb;
+}
+
+.subtitulo input[type='text'],.subtitulo input[type='password'],.subtitulo  select{
+    width: 95% !important;
+    /*border: 1px solid #ddd;*/
+    min-width: 20px;
+}
+
+#grid .alerta{
+	background: #DFF2BF url(/images/layout/icons/success.png) center no-repeat;
+	background-position: 15px 50%; /* x-pos y-pos */
+	border-top: 1px solid #4F8A10;
+	border-bottom: 1px solid #4F8A10;
+	color: #406F0D;	
+	padding-left: 35px;
+	padding-top: 5px;
+	height: 15px;
+}
+
+#grid tr.role-1{
+	background: #ece0bb;
+}

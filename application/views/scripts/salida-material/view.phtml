@@ -1,0 +1,46 @@
+<div id="salida_view">
+	<div class="group_actions">
+		<a href="
+			<?php echo $this->url(array('controller' => 'export', 
+										'action' => 'salida', 
+										'id' => $this->salida_id), 'default', true);
+			?>" title="Exportar en PDF">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+		</a>
+		<a href="
+			<?php echo $this->url(array('controller' => 'export', 
+										'action' => 'salida-reducida', 
+										'id' => $this->salida_id), 'default', true);
+			?>" title="Exportar en PDF Reducido">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat_r.png" />
+		</a>
+		<a href="
+			<?php echo $this->url(array('controller' => 'salida-material', 
+										'action' => 'edit-step1', 
+										'id' => $this->salida_id), 'default', true);
+			?>" title="Editar">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>edit.png" />
+		</a>
+	</div>
+	<div id="info">
+		<dl>			
+			<dt>Asunto: </dt>
+			<dd><?php echo $this->salida->asunto;?></dd>
+		
+			<dt>Responsable: </dt>
+			<dd><?php echo $this->salida->fullname_tip;?></dd>
+			
+			<dt>Fecha Inicio: </dt>
+			<dd><?php echo Kraken_Functions::getDateFromMySql($this->salida->date_start);?></dd>
+			
+			<dt>FEcha Fin: </dt>
+			<dd><?php echo Kraken_Functions::getDateFromMySql($this->salida->date_end);?></dd>
+			
+		</dl>
+		
+		<p>Comentarios: <?php echo nl2br($this->salida->comentarios);?></p>
+	</div>
+	<div id="grid">
+		<?php echo $this->grid;?>
+	</div>
+</div>

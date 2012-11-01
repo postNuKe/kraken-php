@@ -1,0 +1,3 @@
+<h2>�Seguro que quiere eliminar esta Salida de Material?</h2>
+<p><?php echo $this->asunto;?></p>
+<a href="<?php echo $this->url(array('controller' => 'salida-material', 'action' => 'delete', 'id' => $this->salida_id, 'confirm' => true));?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>delete.png" alt="Eliminar"/></a>

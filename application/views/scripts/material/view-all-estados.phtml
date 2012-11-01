@@ -1,0 +1,17 @@
+    <div class="group_actions">
+            <a href="
+                <?php echo $this->url(array('controller' => 'export', 
+                                            'action' => 'estados'), 'default', true);
+                ?>" title="Exportar en PDF">
+                <img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+            </a>            
+    </div>
+
+<div id="grid">
+<?php 
+	foreach($this->grids as $key => $val){
+		echo '<h4 class="estado">' . $val['label'] . '</h4>';
+		echo $val['grid']->deploy();
+	}
+?>
+</div>

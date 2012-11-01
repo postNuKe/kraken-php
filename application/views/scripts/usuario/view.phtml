@@ -1,0 +1,54 @@
+<div id="usuario_view">
+	<div class="group_actions">
+		<?php 
+			if(!$this->user->activo && file_exists($this->configLayout['download']['usuario'])){		
+		?>
+			<a href="
+				<?php echo $this->configLayout['download']['usuarioWWW'] . $this->user->idUsuario . '_inactivo.pdf';?>" title="Exportar en PDF">
+				<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+			</a>
+		<?php }else{ ?>
+			<a href="
+				<?php echo $this->url(array('controller' => 'export', 
+											'action' => 'user', 
+											'id' => $this->idUsuario), 'default', true);
+				?>" title="Exportar en PDF">
+				<img src="<?php echo $this->configLayout['iconsWWW'];?>page_white_acrobat.png" />
+			</a>			
+		<?php } ?>
+		<a href="
+			<?php echo $this->url(array('controller' => 'usuario', 
+										'action' => 'edit', 
+										'id' => $this->idUsuario), 'default', true);
+			?>" title="Editar">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>edit.png" />
+		</a>
+	</div>
+	<div id="info" class="clear">
+		<img src="<?php echo $this->pathPicture('usuarios', $this->idUsuario);?>" />
+		<dl>			
+			<dt>Empleo: </dt>
+			<dd><?php echo $this->user->empleo_name;?>&nbsp;</dd>
+		
+			<dt>Nombre: </dt>
+			<dd><?php echo $this->user->fullname;?>&nbsp;</dd>
+			
+			<dt>D.N.I: </dt>
+			<dd><?php echo $this->user->dni;?>&nbsp;</dd>
+			
+			<dt>T.I.P:</dt>
+			<dd><?php echo $this->user->tip;?>&nbsp;</dd>
+			
+			<dt>Tlf1:</dt>
+			<dd><?php echo $this->user->telf1;?>&nbsp;</dd>
+		</dl>
+		
+		<p>Comentarios: <?php echo nl2br($this->user->comentarios);?></p>
+	</div>
+	<div id="grid">
+		<h2>Materiales Asignados</h2>
+		<?php echo $this->grid_asignado;?>
+		<h2>Materiales que ha entregado</h2>
+		<?php echo $this->grid_entregado;?>		
+	</div>
+</div>

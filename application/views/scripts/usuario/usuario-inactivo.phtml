@@ -1,0 +1,11 @@
+<h2>¿Seguro que quiere pasar este Usuario a Inactivo en el Grupo?</h2>
+<p><?php echo $this->user->fullname_dni;?></p>
+<a
+	href="<?php echo $this->url(array('controller' => 'usuario', 'action' => 'usuario-inactivo', 'id' => $this->user->idUsuario, 'confirm' => true));?>"><img
+	src="<?php echo $this->configLayout['iconsWWW'];?>user_go.png"
+alt="Pasar a Inactivo en el Grupo" /></a>
+<p>Si confirma haciendo click en el icono del usuario, dicho usuario quedar&aacute; inactivo en el Grupo no viendose
+en el listado normal sino en el listado de usuarios inactivos.</p>
+<p>Los siguientes pasos le guiar&aacute;n durante la confirmaci&oacute;n del material que debe entregarle el usuario, y
+los materiales que podr&aacute; usted entregarle a &eacute;l, mientras se generar&aacute; un fichero pdf que tendr&aacute;n
+que firmar ustedes.</p>

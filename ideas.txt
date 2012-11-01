@@ -1,0 +1,302 @@
+- Que en el mismo kraken valga para transmisiones y armamento, solo cambiando el
+ dominio reconozca que tiene que cargar una bd u otra y cambiar el path de 
+ imagenes de categorias y materiales.
+- Roles bien hechos, admin, user de encuadramientos, etc...
+- Manual de la aplicación.
+- Plantilla de materiales asignados. Hacer que por defecto haya una plantilla 
+con los materiales que debería de tener cada usuario, y si no se le entrega 
+dicho material que salga sin checkear y con texto diferente o algo, para así 
+cuando se imprima el pdf de material asignado para que lo firme se pueda ver 
+rapidamente qué es lo que no le hemos dado. Ha habido casos en los que se nos 
+olvido añadir la municion por ejemplo pero sí se la dimos, pero en el pdf no 
+aparecía. Así con la plantilla se ve rapidamente que no la hemos añadido en el 
+kraken, o si se nos olvido darsela pues recordar que tenemos que entregarsela.
+- Tareas. Algo que gestione tareas a hacer, es decir, poner que es lo que hay 
+que hacer y que se pueda abrir por la gente y despues se ponga en cerrado o 
+algo así. Así puede alguien saber como se esta haciendo, que se hizo, que se 
+tiene que hacer.
+- Saber de algún modo donde se encuentra un material en el almacén. Por ejemplo,
+un dibujo genérico del almacén y cuando editas un material o categoría puedas 
+hacer click en una parte de la imagen y se quede guardado con un puntito, eso
+indicará donde se encuentra dicho material según la foto.
+- Poder crear materiales en lotes, es decir, si tenemos 100 grilletes y solo 
+cambia el numero de serie, poder introducir los numeros, el nombre generico, 
+cantidad que sea y genere automaticamente esos 100 grilletes en la categoria
+deseada.
+- Hacer departamentos/oficinas, donde se podrá asignar materiales, tambien que 
+los usuarios puedan ser añadidos a dichos departamentos y así salga separado en
+el listado de usuarios.
+- cuando elimines un material que no lo permita si tiene usuarios relacionados, 
+salidas activas, novedades, etc...
+- Que el breadcrumb en material salga bien cuando añades, editas, visualizas un
+material o categoria, se pierde la ruta - cuando son materiales únicos que en 
+la categoría ponga cuantos están asignados y cuantos no.
+- En los pdfs que salga de fondo en grande centrado el logo ars.
+- Crear Lotes. "Juego completo de controles", pues incluiría los siguientes 
+materiales: 2 señales de 40, 60, 80, control, estrechamiento, prohibido 
+adelantar, 2 de pinchos, 40 tetrápodos, 12 patas. Así al crear una salida sería
+más rápido añadir estos lotes que uno por uno los materiales. Igual que este 
+lote, habría otros como "equipo individual de control de masas".
+- En el informe de usuarios y sus armas, hacer que se puedan añadir los 
+materiales a mostrar en las columnas desde las opciones del kraken, así en un 
+futuro si hay que añadir algun nuevo material que queramos mostrar en el listado
+no hay que modificar el codigo como ahora añadiendo el id del material, sino 
+que se pueda añadir visualmente.
+
+/****************************** PROGRAMACIÓN *******************************************/
+- Hacer un solo formulario de añadir materiales, unificación.
+- Usar Zend_Cache para las sqls para asi reducir el tiempo de carga de las 
+paginas. Usarlo para el listado de usuarios por foto.
+- Usar los validadores y filters en los formularios si son necesarios.
+- Usar los try catch para coger los errores de lo que sea
+try{
+
+}catch (Exception $e){
+
+}
+- Quitar ?> en los ficheros en donde solo haya codigo php
+- Mirar el tema de Zend_Date para las fechas en vez de usar las funciones Kraken
+- Las nuevas lineas de codigo hacerlas con cuatro espacios y NO con tabs
+
+/****************************** TAREAS HECHAS *******************************************/
+--------------------------------------------------------------
+2012-02-23
+--------------------------------------------------------------
+	x Al hacer una copia del kraken en mi antiguo ordenador se perdieron ficheros
+	y otros no estaban del todo actualizados, por lo que se han arreglado todos
+	los errores encontrados y el kraken funciona correctamente.
+	x Se ha mejorado la busqueda de material al añadir o editar un usuario el 
+	denominado autocomplete.
+	x En el listado por foto de los usuarios se ha añadido el empleo del usuario
+	en los nombres.
+--------------------------------------------------------------
+2011-03-28
+--------------------------------------------------------------
+    x En los formularios de añadir material al usuario, etc.. se ha añadido el 
+    campo de búsqueda de material para así ser más sencillo el añadir un 
+    material cuando no sabes en que categoría se encuentra.
+--------------------------------------------------------------
+2011-03-26
+--------------------------------------------------------------
+    x Modificacion del form para asignar materiales, ahora salen paralelos los 
+    materiales de la categoria y los añadidos a la derecha, con los botones de 
+    añadir y quitar en medio.
+--------------------------------------------------------------
+2011-03-06
+--------------------------------------------------------------
+    x En el recuento en pdf, que salgan tambien los estados de material. Tambien
+     que se pueda imprimir en pdf solo los estados, en la pagina de todos los 
+     estados de material.
+--------------------------------------------------------------
+2011-02-27
+--------------------------------------------------------------
+    x Autocreación de encuadramientos.
+    x Ahora se puede añadir los vehiculos al modificar una disponibilidad, de 
+    manera sencilla, como cuando añadimos materiales a un usuario.
+    x Dni explicando que solo puede ser numerico, validarlo etc.
+--------------------------------------------------------------
+2011-02-20
+--------------------------------------------------------------
+	x Bug. Arreglado el que no se mostrara la imagen del usuario en su ficha 
+	personal.
+	x Usar Zend_Translate con log para textos sin traducir 
+	http://www.thomasweidner.com/flatpress/2010/07/30/how-to-add-missing-translations/
+	x Usar Zend_Validate_Identical para el edit password 
+	http://www.thomasweidner.com/flatpress/2010/05/02/validation-of-two-values-or-how-to-proove-identical-ness/
+--------------------------------------------------------------
+2011-02-16
+--------------------------------------------------------------
+	x Arreglado que al imprimir un pdf del material de un usuario, salga partido
+	 el nombre de él donde la firma si tiene tilde o caracter extraño.
+	x Optimización de imagen genérica de usuario, categoria o material. Tardaba
+	 bastante en cargar.
+--------------------------------------------------------------
+2011-02-14
+--------------------------------------------------------------
+	x Que salga una imagen genérica para usuario, categoria o material si no se introduce una.
+	x Poder eliminar la foto de un material, categoria y usuario.
+--------------------------------------------------------------
+2011-02-13
+--------------------------------------------------------------
+	x Ahora los idiomas se cargan automaticamente dependiendo del idioma del navegador del usuario. Falta traducir
+	entero el de ingles.
+	x Unificar el this->getMaterialJavascript que se repite en los controllers. Ahora está en el Controller_Abstract
+--------------------------------------------------------------
+2011-02-12
+--------------------------------------------------------------
+	x Usar dbTable para la tabla VARS para obtener dichos valores sin tener que hacer las sqls directamente en los Action.
+	x En gasto material que se desactiven las categorias que no tengan materiales.
+	x Eliminar vehiculo.
+	x En las listas por foto de los materiales y usuarios ahora se muestra el nombre de dicho material o usuario en la
+	propia foto.
+	x Al editar una categoría poder elegir que columna se ordenará por defecto al abrirla. Existen categorias
+	que viene bien que se ordene por nombre del material, pero otras automaticamente por numero de serie.
+--------------------------------------------------------------
+2011-02-11
+--------------------------------------------------------------
+	x Se esconde los enlaces a Novedades y a Informacion Verbal, al ver que no se usan para nada.
+	x Informe de todos los usuarios y todos los materiales asignados, así podemos ver que le falta a cada uno.
+	x Creado el informe de TODAS las armas, quien las tiene asignadas, cantidad, etc...
+--------------------------------------------------------------
+2011-02-05
+--------------------------------------------------------------
+	x Que se pueda exportar un listado no solo en pdf sino en todos los formatos, en todos los listados.
+	pdf, word, excel y print.
+--------------------------------------------------------------
+2011-02-03
+--------------------------------------------------------------
+	x El pdf de una salida, que se pueda generar otro que sea más sencillo de leer, debe ser que la gente no se entera
+	al leerlo, dicho listado que salgan los materiales pero si por ejemplo "bocacha" sale ahora "bocacha 1, bocacha 2, etc.."
+	pues que salga "5 bocachas" por ejemplo, "18 chalecos balisticos".
+	Ahora salen dos iconos de pdf en una salida, el normal y el reducido. El reducido solo pone el número total de cada material
+	y el normal ahora sale la primera pagina dicho resumen y siguiente los materiales como siempre.
+--------------------------------------------------------------
+2011-01-30
+--------------------------------------------------------------
+	x Listado de materiales. Poder listarlos por imagen, como en los usuarios.
+--------------------------------------------------------------
+2011-01-29
+--------------------------------------------------------------
+	x Informe de armas. Que se puedan ordenar las columnas y por defecto por escalafón.
+	x Listado usuarios. Los comentarios poder mostrar X caracteres con " ....." al final, dicho número de caracteres poder
+	modificarlos en settings del kraken.
+--------------------------------------------------------------
+2011-01-28
+--------------------------------------------------------------
+	x Modificar el añadir un vehiculo a un encuadramiento, que no salga la disponibilidad, sino que salga el listado con
+	todos los vehiculos.
+	x Que se muestren los indicativos de todos los vehiculos de un encuadramiento cuando vas a añadir un vehiculo nuevo para
+	asi saber por que indicativo vas.
+--------------------------------------------------------------
+2011-01-20
+--------------------------------------------------------------
+	x Poner un icono en el listado de usuarios para cada uno que al hacer click te pase a inactivo dicho usuario y así no es
+	tan complicado el tener que editarlo y cambiar el parámetro adecuado en el formulario.
+--------------------------------------------------------------
+2011-10-17
+--------------------------------------------------------------
+	x El escalafón poder verlo y modificarlo rapidamente sin tener que subir o bajar uno por uno al usuario.
+--------------------------------------------------------------
+2010-10-15
+--------------------------------------------------------------
+	x Encuadramientos. Base.
+--------------------------------------------------------------
+2010-10-13
+--------------------------------------------------------------
+	x Encuadramientos. Seguridad.
+--------------------------------------------------------------
+2010-10-02
+--------------------------------------------------------------
+	x Encuadramientos. Bocacha, escudo y chaleco balístico.
+--------------------------------------------------------------
+2010-09-30
+--------------------------------------------------------------
+	x Encuadramientos. En los vehículos poder designar al conductor y al que lleva las transmisiones.
+--------------------------------------------------------------
+2010-09-29
+--------------------------------------------------------------
+	x Encuadramientos. Al añadir un usuario a un vehículo poder ponerle comentarios y que salgan al lado del usuario.
+--------------------------------------------------------------
+2010-09-24
+--------------------------------------------------------------
+	x Modificación ENORME de encuadramientos, ahora se carga mejor el cuadrante, se ven mejor los usuarios, etc...
+--------------------------------------------------------------
+2010-09-20
+--------------------------------------------------------------
+	x SA9.
+--------------------------------------------------------------
+2010-09-14
+--------------------------------------------------------------
+	x Estados de material. Un material puede estar roto, o en estado "reparación" por ejemplo. Que no esté disponible dicho
+	material, sería como asignarselo a un usuario.
+--------------------------------------------------------------
+2010-09-06
+--------------------------------------------------------------
+	x Encuadramientos. Poder crear encuadramientos cargándose antes el cuadrante en excel de Servicios. Poder crear vehículos,
+	seleccionar la gente y añadir.
+--------------------------------------------------------------
+2010-09-04
+--------------------------------------------------------------
+	x Poder visualizar en pdf una novedad antes de grabarla.
+--------------------------------------------------------------
+2010-09-03
+--------------------------------------------------------------
+	x Hacer que en el pdf de las salidas salga ordenado las categorías por orden alfabético, ahora sale por id.
+--------------------------------------------------------------
+2010-09-02
+--------------------------------------------------------------
+	x Duplicar salida de material.
+--------------------------------------------------------------
+2010-09-01
+--------------------------------------------------------------
+	x Al eliminar un arma que se entrego desaparece de la persona que lo entregó, por lo que si se entrega un arma a una persona
+	que se va del grupo y esa arma no pertenecía a él, a quien sí la trajo al grupo le desaparecerá y por lo tanto no se sabrá
+	que arma trajo. Ahora se añade un comentario en los comentarios del usuario que trajo inicialmente el arma.
+--------------------------------------------------------------
+2010-07-25
+--------------------------------------------------------------
+	x Al crear un usuario que salgan materiales asignados por defecto, asi que en opciones que
+	se puedan determinar que materiales serán asignados por defecto cuando se cree un usuario.
+--------------------------------------------------------------
+2010-07-23
+--------------------------------------------------------------
+	x Tareas. Que se pueda dar de alta tareas que tienen que hacerse, al poder ser como posit 
+	que salgan cuando te logueas.
+--------------------------------------------------------------
+2010-07-20
+--------------------------------------------------------------
+	x Selección de administradores, poder hacer que los usuarios sean admins del kraken. (Editar usuario).
+--------------------------------------------------------------
+2010-07-13
+--------------------------------------------------------------
+	x Hacer algo cuando un usuario se va de la unidad
+	x El usuario podrá entregar material cuando llega al grupo (arma). Que salga en el usuario el arma que entregó.
+	x Poder mostrar y exportar un listado de todos los usuarios con sus respectivas armas, cada arma en una columna.
+		empleo|nombre|dni|arma corta|arma larga|arma entregada|comentarios del arma entregada
+	x Información verbal. Tener número de registro. mirar en documentos/
+		Nueva seccion llamado información verbal: nuevo informe:
+		 - Emisor: desplegable con los usuarios para que se elija aquella persona que va a crear el informe (sargentos lo más normal)
+	     - Fecha del suceso y con hora.
+	     - Tipo de ejercicio, texto como el asunto.
+	     - Material y solo un material
+	     - Narración de los hechos (comentarios).
+--------------------------------------------------------------
+2010-05-12
+--------------------------------------------------------------
+	x Backup de la BD.
+--------------------------------------------------------------
+2010-05-10
+--------------------------------------------------------------
+	x Búsqueda global, que esté puesto debajo del picoleto y busque en TODO.
+--------------------------------------------------------------
+2010-05-07
+--------------------------------------------------------------
+	x Recuento de material, poder crear un pdf con todo el material que hay en la base de datos.
+	Que ponga la cantidad que hay, cantidad asignada y cantidad que tiene que haber en almacén.
+--------------------------------------------------------------
+2010-05-06
+--------------------------------------------------------------
+	x Novedades, asunto, fecha y comentarios. Generar pdf.
+--------------------------------------------------------------
+2010-05-05
+--------------------------------------------------------------
+	x Gasto de Material, introducir asunto, fecha del gasto, materiales y cantidad que se han gastado
+	y que te imprima un pdf con todos esos datos.
+--------------------------------------------------------------
+2010-05-04
+--------------------------------------------------------------
+	x Login de usuarios para poder entrar en Kraken.
+--------------------------------------------------------------
+2010-04-18
+--------------------------------------------------------------
+	x Opciones, poder modificar algunas opciones de la aplicación, como por ejemplo las categorias
+	que pertenecen a las diferentes armas en el informe de armas de los usuarios.
+--------------------------------------------------------------
+2010-04-17
+--------------------------------------------------------------
+	x Poder ordenar los usuarios por escalafón, subirlos y bajarlos.
+--------------------------------------------------------------
+2010-04-16
+--------------------------------------------------------------
+	x Implantación del empleo para los usuarios.
+	x Implantación del zfdatagrid versión 0.5.

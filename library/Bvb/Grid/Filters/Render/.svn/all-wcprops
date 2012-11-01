@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Filters/Render
+END
+RenderInterface.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Filters/Render/RenderInterface.php
+END
+RenderAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1446/trunk/library/Bvb/Grid/Filters/Render/RenderAbstract.php
+END

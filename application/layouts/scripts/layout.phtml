@@ -1,0 +1,75 @@
+<?php
+//$this->config = Zend_Registry::get('config');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle($this->configLayout['headTitle']);
+$this->headTitle($this->translate->_('G.R.S. 8 Canarias'));
+?>
+
+<?php echo $this->doctype() ?>
+<html><!-- xmlns="http://www.w3.org/1999/xhtml" -->
+<base href="<?php echo $this->baseUrl(); ?>" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<?php
+	echo $this->headTitle();
+	echo $this->headScript();
+    $this->loadSkin($this->skin);
+  	echo $this->headLink()//->appendStylesheet('/css/global.css')
+  							->appendStylesheet('/css/pepper-grinder/jquery-ui-1.8.17.custom.css') . "\n";
+  	echo $this->jQuery();
+    ?>       
+</head>
+<body>
+<!-- http://layouts.ironmyers.com/customize/ -->
+<div id="doc3" class="yui-t7"> 
+	<div id="hd"><!-- header -->
+		<div class="cabecera yui-b"><!--<div class="logo_ars"></div>-->
+			<div class="buttons">
+				<ul>
+					<li><a href="<?php echo $this->url(array('controller'=>'options', 'action' => 'index'),'default',true) ?>" title="<?php echo $this->translate->_('Kraken Edit Options');?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>cog_edit.png" /></a></li>
+					<li><a href="<?php echo $this->url(array('controller'=>'user', 'action' => 'index'),'default',true) ?>" title="<?php echo $this->translate->_('My Account');?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>picoleto.png" /></a></li>
+					<li><a href="<?php echo $this->url(array('controller'=>'index', 'action' => 'index'),'default',true) ?>" title="<?php echo $this->translate->_('Home');?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>home.png" /></a></li>
+					<li><a href="<?php echo $this->url(array('controller'=>'user', 'action' => 'logout'),'default',true) ?>" title="<?php echo $this->translate->_('Kraken Logout');?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>logout.png" /></a></li>
+				</ul>
+				<form method="get" action="<?php echo $this->url(array('controller' => 'search', 'action' => 'index'), 'default', true);?>"><input type="text" name="text"/></form>
+			</div>
+			<h1><a href="<?php echo $this->url(array('controller' => 'index'), 'default', true);?>"><?php echo $this->configLayout['title']?></a></h1>
+		</div>
+		<div class="yui-b">
+			<ul class="menu"><!--  class="active" -->
+				<li><a href="<?php echo $this->url(array('controller'=>'usuario'),'default',true) ?>"><span><?php echo $this->translate->_('Users');?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'material'),'default',true) ?>"><span><?php echo $this->translate->_('Catalog');?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'salida-material'),'default',true) ?>"><span><?php echo $this->translate->_('Outputs');?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'gasto-material'),'default',true) ?>"><span><?php echo $this->translate->_('Costs');?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'recuento-material'),'default',true) ?>"><span><?php echo $this->translate->_('Counts');?></span></a></li>
+				<!-- <li><a href="<?php echo $this->url(array('controller'=>'novedad'),'default',true) ?>"><span><?php echo $this->translate->_('News');?></span></a></li> -->
+				<!-- <li><a href="<?php echo $this->url(array('controller'=>'informacion-verbal'),'default',true) ?>"><span><?php echo $this->translate->_('Inf.Verbal');?></span></a></li> -->
+				<li><a href="<?php echo $this->url(array('controller'=>'notes'),'default',true) ?>"><span><?php printf($this->translate->_("Notes (%1\$s)"), $this->countNotes);?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'encuadramiento'),'default',true) ?>"><span><?php echo $this->translate->_('Frameworks');?></span></a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'sa9'),'default',true) ?>"><span><?php echo $this->translate->_('SA-9');?></span></a></li>
+			</ul>		
+		</div>
+	</div>  
+	<div id="bd"><!-- body -->
+		<div id="breadcrumbs" class="yui-b">
+			<?php echo $this->navigation()->breadcrumbs()->setLinkLast(false)->setMinDepth(0)->render(); ?>		
+		</div>
+		<?php if(count($this->messages) > 0):?>
+			<div id="messages" class="yui-b">
+			<?php 
+				foreach($this->messages as $key => $messages){
+					echo '<p class="' . ((isset($messages[1])) ? $messages[1] : 'info') . '">' . $messages[0] . '</p>';
+				}		
+			?>
+			</div>
+		<?php endif ?>			
+		<div id="yui-main">
+			<div class="yui-b"><h2><?php echo $this->pageLabel; ?></h2><?php echo $this->layout()->content ?></div>
+		</div>
+	</div>  
+	<div id="ft"><!-- Aplicación realizada por David Macías Asensi --></div> 
+</div> 
+<!-- Mask to cover the whole screen -->
+  <div id="mask"></div>
+</body>
+</html>

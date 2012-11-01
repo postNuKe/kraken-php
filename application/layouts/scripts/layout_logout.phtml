@@ -1,0 +1,45 @@
+<?php
+//$this->config = Zend_Registry::get('config');
+//$traslate = Zend_Registry::get('Zend_Translate');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle($this->translate->_('Service Weapons'));
+$this->headTitle($this->translate->_('G.R.S. 8 Canarias'));
+?>
+
+<?php echo $this->doctype() ?>
+<html><!-- xmlns="http://www.w3.org/1999/xhtml" -->
+<base href="<?php echo $this->baseUrl(); ?>" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<?php
+	echo $this->headTitle();
+	echo $this->headScript();
+    	$this->loadSkin($this->skin);
+  	echo $this->headLink()//->appendStylesheet('/css/global.css')
+  							->appendStylesheet('/css/pepper-grinder/jquery-ui-1.8.17.custom.css') . "\n";
+  	echo $this->jQuery();
+    ?>       
+</head>
+<body>
+<!-- http://layouts.ironmyers.com/customize/ -->
+<div id="doc3" class="yui-t7"> 
+	<div id="bd"><!-- body -->
+		<?php if(count($this->messages) > 0):?>
+			<div id="messages" class="yui-b">
+			<?php 
+				foreach($this->messages as $key => $messages){
+					echo '<p class="' . ((isset($messages[1])) ? $messages[1] : 'info') . '">' . $messages[0] . '</p>';
+				}		
+			?>
+			</div>
+		<?php endif ?>				
+		<div id="yui-main">
+			<div class="yui-b"><h2><?php echo $this->pageLabel; ?></h2><?php echo $this->layout()->content ?></div>
+		</div>
+	</div>  
+	<div id="ft"><!-- Aplicacion realizada por David Macias Asensi --></div> 
+</div> 
+<!-- Mask to cover the whole screen -->
+  <div id="mask"></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<div id="material_view">
+	<div class="group_actions">
+		<a href="
+			<?php echo $this->url(array('controller' => 'material', 
+										'action' => 'estado', 
+										'idMaterial' => $this->material->idMaterial), 'default', true);
+			?>" title="Estados del Material">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>pill.png" />
+		</a>
+		<a href="
+			<?php echo $this->url(array('controller' => 'material', 
+										'action' => 'editmaterial', 
+										'idMaterial' => $this->material->idMaterial), 'default', true);
+			?>" title="Editar">
+			<img src="<?php echo $this->configLayout['iconsWWW'];?>edit.png" />
+		</a>
+	</div>
+	<div id="info" class="clear">
+		<img src="<?php echo $this->imageFile;?>" />
+		<dl>		
+				
+			<dt>Pertenece a: </dt>
+			<dd><?php echo $this->material->categorie_tree;?></dd>
+		
+			<dt>Nombre: </dt>
+			<dd><?php echo $this->material->nombre;?>&nbsp;</dd>
+		
+			<dt>N&uacute;mero de Serie: </dt>
+			<dd><?php echo $this->material->numeroSerie;?>&nbsp;</dd>
+		
+			<dt>Talla: </dt>
+			<dd><?php echo $this->material->talla;?>&nbsp;</dd>
+		
+			<dt>Lote: </dt>
+			<dd><?php echo $this->material->lote;?>&nbsp;</dd>
+		
+			<dt>F. Fabricaci&oacute;n: </dt>
+			<dd><?php echo $this->material->fecha_fabricacion;?>&nbsp;</dd>
+		
+			<dt>Cantidad: </dt>
+			<dd><?php echo $this->material->cantidad;?>&nbsp;</dd>
+		
+			
+		</dl>
+		
+		<p>Comentarios: <?php echo nl2br($this->material->comentarios);?></p>
+	</div>
+	<div id="grid">
+		<h2>Estados</h2>
+		<?php 
+			foreach($this->grid_estados as $key => $val){
+				echo '<h4 class="estado">' . $val['label'] . '</h4>';
+				echo $val['grid']->deploy();
+			}
+		?>
+		<h2>Usuarios</h2>
+		<?php echo $this->grid_users;?>
+		<h2>Salidas de Material</h2>
+		<?php echo $this->grid_salidas;?>
+		<h2>Usuarios que entregaron este material</h2>
+		<?php echo $this->grid_users_entregado;?>
+		<h2>Informaciones Verbales relacionadas</h2>
+		<?php echo $this->grid_verbal;?>
+	</div>
+</div>

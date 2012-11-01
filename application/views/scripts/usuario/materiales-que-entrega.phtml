@@ -1,0 +1,13 @@
+<div id="usuario_materiales_que_entrega">
+<h2><?php echo $this->user->fullname_dni;?></h2>
+<?php
+$this->form->setAction($this->url());
+echo $this->form;
+?></div>
+<div id="dialog_add_qty" class="window">
+<div class="d-header"><label>Cantidad</label> <input
+	id="input_material_add_qty" type="text" value="1"
+	onclick="this.value=''" />
+<button name="material_add_qty" id="material_add_qty" type="button">A&ntilde;adir</button>
+</div>
+</div>

@@ -1,0 +1,3 @@
+<h2>¿Seguro que quiere eliminar este Material?</h2>
+<p><?php echo $this->material->nombre . ' [' . $this->material->numeroSerie . ']';?></p>
+<a href="<?php echo $this->url(array('controller' => 'material', 'action' => 'delete-material', 'idMaterial' => $this->material->idMaterial, 'confirm' => true));?>"><img src="<?php echo $this->configLayout['iconsWWW'];?>delete.png" alt="Eliminar"/></a>
